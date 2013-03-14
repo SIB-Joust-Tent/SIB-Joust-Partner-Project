@@ -1,0 +1,39 @@
+<h1>Listing companies</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Tagline</th>
+    <th>Location</th>
+    <th>Facebook</th>
+    <th>Twitter</th>
+    <th>Rss Feed</th>
+    <th>Description</th>
+    <th>Url</th>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @companies.each do |company| %>
+  <tr>
+    <td><%= company.name %></td>
+    <td><%= company.tagline %></td>
+    <td><%= company.location %></td>
+    <td><%= company.facebookhandle %></td>
+    <td><%= company.twitterhandle %></td>
+    <td><%= company.rssfeed %></td>
+    <td><%= company.description %></td>
+    <td><%= company.url %></td>
+    <td><%= company.image %></td>
+    <td><%= link_to 'Show', company %></td>
+    <td><%= link_to 'Edit', edit_company_path(company) %></td>
+    <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Company', new_company_path %>
