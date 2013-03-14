@@ -2,4 +2,3 @@
 //= require jquery-ui
 //= require foundation
 $(document).foundation();
-$(document).foundation();
