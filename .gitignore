@@ -16,6 +16,7 @@
 db/*.sqlite3
 /log/*
 tmp/*
+.rvmrc
 
 # various artifacts
 **.war
