@@ -1,0 +1,74 @@
+#----------------------------------------------------------------------------
+# Ignore these files when commiting to a git repository
+#
+# The original version of this file is found here:
+# https://github.com/RailsApps/rails3-application-templates/raw/master/files/gitignore.txt
+#
+# Corrections? Improvements? Create a GitHub issue:
+# http://github.com/RailsApps/rails3-application-templates/issues
+#----------------------------------------------------------------------------
+
+# bundler state
+/.bundle
+/vendor/bundle/
+
+# minimal Rails specific artifacts
+db/*.sqlite3
+/log/*
+tmp/*
+
+# various artifacts
+**.war
+*.rbc
+*.sassc
+.rspec
+.redcar/
+.sass-cache
+db-load-staging
+/config/config.yml
+/config/database.yml
+/coverage.data
+/coverage/
+/db/*.javadb/
+/db/*.sqlite3-journal
+/db/structure.sql
+/doc/api/
+/doc/app/
+/doc/features.html
+/doc/specs.html
+/doc/*
+/public/cache
+/public/stylesheets/compiled
+/public/system
+/public/assets/*
+/public/uploads/*
+/spec/tmp/*
+/cache
+/capybara*
+/capybara-*.html
+/gems
+/bin
+/rerun.txt
+/specifications
+/app/models/production_db_connection.rb
+*sublime-workspace
+
+# scm revert files
+**.orig
+
+# Mac finder artifacts
+.DS_Store
+
+# Netbeans project directory
+/nbproject/
+
+# Textmate project files
+/*.tmproj
+
+# vim artifacts
+**.swp
+**.swm
+**.swn
+**.swo
+
+/.idea
