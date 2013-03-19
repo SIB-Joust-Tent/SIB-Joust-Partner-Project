@@ -5,7 +5,6 @@ gem 'pg'
 gem 'jquery-rails'
 gem "devise"
 
-gem 'fastercsv' # Only required on Ruby 1.8 and below
 gem 'rails_admin'
 gem 'carrierwave'
 
