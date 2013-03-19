@@ -3,5 +3,4 @@ class Company < ActiveRecord::Base
   				  			:tagline, :twitterhandle, :url
 
   has_many :users
-  has_many :employees
 end

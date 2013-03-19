@@ -75,9 +75,6 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
     @company.destroy
 
-    respond_to do |format|
-      format.html { redirect_to companies_url }
-      format.json { head :no_content }
-    end
+    redirect_to companies_url
   end
 end
