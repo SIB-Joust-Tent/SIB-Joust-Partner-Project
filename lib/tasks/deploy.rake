@@ -17,7 +17,7 @@ namespace :deploy do
   end
   
   task :tag do
-    release_name = "#{APP}_release-#{Time.now.utc.strftime("%Y%m%d%H%M%S")}"
+    release_name = "joust_release-#{Time.now.utc.strftime("%Y%m%d%H%M%S")}"
     puts "Tagging release as '#{release_name}'"
     puts `git tag -a #{release_name} -m 'Tagged release'`
     puts `git push heroku --tags`
@@ -39,7 +39,7 @@ namespace :deploy do
   end
 
   task :push_previous do
-    prefix = "#{APP}_release-"
+    prefix = "joust_release-"
     releases = `git tag`.split("\n").select { |t| t[0..prefix.length-1] == prefix }.sort
     current_release = releases.last
     previous_release = releases[-2] if releases.length >= 2

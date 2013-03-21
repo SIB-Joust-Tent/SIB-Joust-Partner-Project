@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130319191529) do
+ActiveRecord::Schema.define(:version => 20130321192703) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -25,7 +25,10 @@ ActiveRecord::Schema.define(:version => 20130319191529) do
     t.string   "image"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.string   "slug"
   end
+
+  add_index "companies", ["slug"], :name => "index_companies_on_slug", :unique => true
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -57,10 +60,12 @@ ActiveRecord::Schema.define(:version => 20130319191529) do
     t.string   "position",                               :null => false
     t.string   "avatar"
     t.integer  "company_id"
+    t.string   "slug"
   end
 
   add_index "users", ["company_id"], :name => "index_users_on_company_id"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+  add_index "users", ["slug"], :name => "index_users_on_slug", :unique => true
 
 end
