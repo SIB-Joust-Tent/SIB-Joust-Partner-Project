@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
-  # GET /companies
-  # GET /companies.json
+  respond_to :html, :json
+
   def index
     @companies = Company.all
 
@@ -10,8 +10,6 @@ class CompaniesController < ApplicationController
     end
   end
 
-  # GET /companies/1
-  # GET /companies/1.json
   def show
     @company = Company.find(params[:id])
 
@@ -21,8 +19,26 @@ class CompaniesController < ApplicationController
     end
   end
 
-  # GET /companies/new
-  # GET /companies/new.json
+  def analytics
+    respond_to do |format|
+      format.json do
+        @company = Company.find(params[:id])
+        ga = Gattica.new({:email => ENV['ANALYTICS_USER'], :password => ENV['ANALYTICS_PASSWORD']})
+        ga.profile_id = ga.accounts.find{|a| a.title == "Pitchdeck"}.profile_id
+        start_date = params[:start_date].blank? ? '2008-01-01' : Date.strptime(params[:start_date], '%m/%d/%Y').to_s
+        end_date = params[:end_date].blank? ? Date.today.to_s : Date.strptime(params[:end_date], '%m/%d/%Y').to_s
+        data = ga.get({
+          :start_date => start_date, 
+          :end_date => end_date, 
+          :metrics => ['pageViews', 'uniquePageviews', 'avgTimeOnPage']
+        })
+        binding.pry
+        # Jamie: Here. Data is: [{:pageviews=>93.0}, {:uniquePageviews=>51.0}, {:avgTimeOnPage=>231.375}]
+        respond_with data.points[0].metrics
+      end
+    end
+  end
+
   def new
     @company = Company.new
 
@@ -32,13 +48,10 @@ class CompaniesController < ApplicationController
     end
   end
 
-  # GET /companies/1/edit
   def edit
     @company = Company.find(params[:id])
   end
 
-  # POST /companies
-  # POST /companies.json
   def create
     @company = Company.new(params[:company])
 
@@ -53,8 +66,6 @@ class CompaniesController < ApplicationController
     end
   end
 
-  # PUT /companies/1
-  # PUT /companies/1.json
   def update
     @company = Company.find(params[:id])
 
@@ -69,8 +80,6 @@ class CompaniesController < ApplicationController
     end
   end
 
-  # DELETE /companies/1
-  # DELETE /companies/1.json
   def destroy
     @company = Company.find(params[:id])
     @company.destroy

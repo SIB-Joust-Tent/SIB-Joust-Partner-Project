@@ -3,7 +3,11 @@ SIBJoustPartnerProject::Application.routes.draw do
 
   devise_for :users
 
-  resources :companies
+  resources :companies do
+    member do
+      get :analytics
+    end
+  end
 
   root :to => redirect('/companies/joust')
 
