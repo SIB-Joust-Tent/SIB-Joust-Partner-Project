@@ -3,7 +3,6 @@ class CompaniesController < ApplicationController
   # GET /companies.json
   def index
     @companies = Company.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @companies }
@@ -77,4 +76,5 @@ class CompaniesController < ApplicationController
 
     redirect_to companies_url
   end
+
 end

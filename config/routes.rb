@@ -5,6 +5,8 @@ SIBJoustPartnerProject::Application.routes.draw do
 
   resources :companies
 
+  resources :angel_list
+
   root :to => redirect('/companies/joust')
 
   # The priority is based upon order of creation:
