@@ -5,6 +5,15 @@ SIBJoustPartnerProject::Application.routes.draw do
 
   resources :companies
 
+  namespace :angellist do
+    match 'company_info' => 'api#company_info'
+    match 'roles' => 'api#roles'
+    match 'comments' => 'api#comments'
+    match 'jobs' => 'api#jobs'
+    match 'followers' => 'api#followers'
+    match 'press' => 'api#press'
+  end
+
   root :to => redirect('/companies/joust')
 
   # The priority is based upon order of creation:
