@@ -1,0 +1,15 @@
+@mixin prefixed($property, $value, $second:false) {
+  @if $second {
+    -webkit-#{$property}: $value, $second;
+       -moz-#{$property}: $value, $second;
+        -ms-#{$property}: $value, $second;
+         -o-#{$property}: $value, $second;
+            #{$property}: $value, $second;
+  } @else {
+    -webkit-#{$property}: $value;
+       -moz-#{$property}: $value;
+        -ms-#{$property}: $value;
+         -o-#{$property}: $value;
+            #{$property}: $value;
+  }
+}

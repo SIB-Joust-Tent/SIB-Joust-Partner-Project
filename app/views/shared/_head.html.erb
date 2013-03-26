@@ -1,0 +1,23 @@
+<script type="text/javascript">
+  WebFontConfig = {
+    typekit: { id: 'ozj4uiq' }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1.0.31/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+<title><%= content_for(:title) %>Joust</title>
+<meta name="description" content="<%= content_for(:description) %>">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="/favicon.ico?v=3" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<%= default_stylesheet_include %>
+<%= javascript_include_tag "vendor/custom.modernizr" %>
+<%= csrf_meta_tags %>
+<%= yield :head %>

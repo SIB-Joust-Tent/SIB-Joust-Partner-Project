@@ -1,0 +1,13 @@
+@import "mixins";
+
+body {
+  nav.top-bar {
+    @include prefixed(box-shadow, inset 0 1px #fff, 0 1px 3px rgba(34,25,25,0.4));
+
+    li.name {
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+}
