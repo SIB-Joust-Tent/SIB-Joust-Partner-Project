@@ -1,7 +1,7 @@
 # All URLs are hardcoded to Joust's profile
 require 'open-uri'
 
-class AngelListController < ApplicationController
+class Angellist::ApiController < ApplicationController
 	respond_to :json
 
   def company_info

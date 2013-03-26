@@ -5,12 +5,14 @@ SIBJoustPartnerProject::Application.routes.draw do
 
   resources :companies
 
-  match 'company_info' => 'angel_list#company_info'
-  match 'roles' => 'angel_list#roles'
-  match 'comments' => 'angel_list#comments'
-  match 'jobs' => 'angel_list#jobs'
-  match 'followers' => 'angel_list#followers'
-  match 'press' => 'angel_list#press'
+  namespace :angellist do
+    match 'company_info' => 'api#company_info'
+    match 'roles' => 'api#roles'
+    match 'comments' => 'api#comments'
+    match 'jobs' => 'api#jobs'
+    match 'followers' => 'api#followers'
+    match 'press' => 'api#press'
+  end
 
   root :to => redirect('/companies/joust')
 
