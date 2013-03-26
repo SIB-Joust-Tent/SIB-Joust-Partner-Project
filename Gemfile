@@ -4,6 +4,7 @@ gem 'rails', '3.2.12'
 gem 'pg'
 gem 'jquery-rails'
 gem "devise"
+gem "devise_browserid_authenticatable"
 
 gem 'rails_admin'
 gem 'carrierwave'
