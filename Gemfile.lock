@@ -28,11 +28,6 @@ GEM
     activesupport (3.2.12)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    angellist_api (1.0.3)
-      faraday (~> 0.7)
-      faraday_middleware (~> 0.7)
-      hashie (>= 1.1.0)
-      multi_json (~> 1.0)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.3.1.0)
@@ -62,10 +57,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    faraday (0.8.6)
-      multipart-post (~> 1.1)
-    faraday_middleware (0.9.0)
-      faraday (>= 0.7.4, < 0.9)
     font-awesome-sass-rails (3.0.2.2)
       railties (>= 3.1.1)
       sass-rails (>= 3.1.1)
@@ -73,7 +64,6 @@ GEM
     fssm (0.2.10)
     haml (4.0.1)
       tilt
-    hashie (2.0.3)
     hike (1.2.1)
     i18n (0.6.4)
     journey (1.0.4)
@@ -95,7 +85,6 @@ GEM
     method_source (0.8.1)
     mime-types (1.21)
     multi_json (1.7.1)
-    multipart-post (1.2.0)
     nested_form (0.3.1)
     nokogiri (1.5.9)
     orm_adapter (0.4.0)
@@ -184,7 +173,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  angellist_api
   carrierwave
   coffee-rails (~> 3.2.1)
   compass
