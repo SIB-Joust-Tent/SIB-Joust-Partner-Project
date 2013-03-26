@@ -5,7 +5,12 @@ SIBJoustPartnerProject::Application.routes.draw do
 
   resources :companies
 
-  resources :angel_list
+  match 'company_info' => 'angel_list#company_info'
+  match 'roles' => 'angel_list#roles'
+  match 'comments' => 'angel_list#comments'
+  match 'jobs' => 'angel_list#jobs'
+  match 'followers' => 'angel_list#followers'
+  match 'press' => 'angel_list#press'
 
   root :to => redirect('/companies/joust')
 
