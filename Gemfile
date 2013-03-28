@@ -9,6 +9,8 @@ gem 'rails_admin'
 gem 'carrierwave'
 gem 'friendly_id'
 
+gem 'ruby-trello', git: 'git://github.com/jeremytregunna/ruby-trello.git'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

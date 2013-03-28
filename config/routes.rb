@@ -14,6 +14,10 @@ SIBJoustPartnerProject::Application.routes.draw do
     match 'press' => 'api#press'
   end
 
+  namespace :trello do
+    match 'joust_board' => 'api#joust_board'
+  end
+
   root :to => redirect('/companies/joust')
 
   # The priority is based upon order of creation:
