@@ -5,11 +5,11 @@ gem 'pg'
 gem 'jquery-rails'
 gem "devise"
 gem "devise_browserid_authenticatable"
-
 gem 'rails_admin'
 gem 'carrierwave'
 gem 'friendly_id'
 gem 'gattica', :git => 'git://github.com/chrisle/gattica.git'
+gem "fog"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,10 +19,7 @@ group :assets do
   gem "compass"
   gem "zurb-foundation"
   gem "haml"
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
+  gem 'asset_sync'
   gem 'uglifier', '>= 1.0.3'
 end
 

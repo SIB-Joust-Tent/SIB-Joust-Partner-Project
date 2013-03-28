@@ -1,4 +1,6 @@
 SIBJoustPartnerProject::Application.configure do
+  # Settings specified here will take precedence over those in config/application.rb
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -15,7 +17,7 @@ SIBJoustPartnerProject::Application.configure do
   config.assets.compile = true
   config.assets.digest = true
 
-  # config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+  config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
