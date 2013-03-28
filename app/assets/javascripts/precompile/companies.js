@@ -1,3 +1,2 @@
 //= require .//common
-//= require code/SIBJoust
-//= require code/controllers
+//= require code/analytics

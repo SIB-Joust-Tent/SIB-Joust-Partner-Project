@@ -1,10 +1,6 @@
 jQuery ->
-  $("#signinBtn").on "click", (e) ->
-    navigator.id.request()
-
-  $("#signoutBtn").on "click", (e) ->
-    navigator.id.logout()
- 
+  # For some reason, converting this to Angular does not work. The $http post isn't 
+  # working the same as the $.ajax post oddly...
   navigator.id.watch({
     loggedInUser: window.currentUser,
     onlogin: (assertion) ->
