@@ -1,2 +1,6 @@
 %div{ "ng-app" => "SIBJoust" }
   %div{ "ng-controller" => "AnalyticsCtrl" }
+    %ul
+      %li Page View: {{data.pageviews}}
+      %li Unique Page Views: {{data.uniquePageviews}}
+      %li Ang. Time on Page: {{data.avgTimeOnPage}}

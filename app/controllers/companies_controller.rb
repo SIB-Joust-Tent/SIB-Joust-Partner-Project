@@ -23,18 +23,8 @@ class CompaniesController < ApplicationController
     respond_to do |format|
       format.json do
         @company = Company.find(params[:id])
-        ga = Gattica.new({:email => ENV['ANALYTICS_USER'], :password => ENV['ANALYTICS_PASSWORD']})
-        ga.profile_id = ga.accounts.find{|a| a.title == "Pitchdeck"}.profile_id
-        start_date = params[:start_date].blank? ? '2008-01-01' : Date.strptime(params[:start_date], '%m/%d/%Y').to_s
-        end_date = params[:end_date].blank? ? Date.today.to_s : Date.strptime(params[:end_date], '%m/%d/%Y').to_s
-        data = ga.get({
-          :start_date => start_date, 
-          :end_date => end_date, 
-          :metrics => ['pageViews', 'uniquePageviews', 'avgTimeOnPage']
-        })
-        binding.pry
-        # Jamie: Here. Data is: [{:pageviews=>93.0}, {:uniquePageviews=>51.0}, {:avgTimeOnPage=>231.375}]
-        respond_with data.points[0].metrics
+        analytics_client = AnalyticsClient.new(params[:start_date], params[:end_date])
+        respond_with analytics_client.data
       end
     end
   end

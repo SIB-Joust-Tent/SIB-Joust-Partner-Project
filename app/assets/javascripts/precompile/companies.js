@@ -1,2 +1,2 @@
 //= require .//common
-//= require code/analytics
+//= require code/controllers/analytics

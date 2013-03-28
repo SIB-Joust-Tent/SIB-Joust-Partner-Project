@@ -4,3 +4,5 @@
       %a.button{ href: "#", "ng-click" => "signin()" } Login
     - else
       %a.button{ href: "#", "ng-click" => "signout()" } Logout
+      - if current_user.company
+        %a{ href: company_path(current_user.company) } #{current_user.company.name}
