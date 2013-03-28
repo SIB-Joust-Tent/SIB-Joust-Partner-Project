@@ -1,4 +1,4 @@
-@joustApp.controller 'LoginCtrl', (['$scope', '$http', '$window', ($scope, $http, $window) ->
+@joustApp.controller 'LoginCtrl', (['$scope', ($scope) ->
   $scope.signin = ->
     navigator.id.request()
 
