@@ -1,0 +1,11 @@
+@import "mixins";
+
+body {
+  nav.top-bar {
+    li.name {
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+}
