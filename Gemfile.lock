@@ -1,14 +1,3 @@
-GIT
-  remote: git://github.com/jeremytregunna/ruby-trello.git
-  revision: 02a5320a83ec8b08621041779b718f2c0639e2d8
-  specs:
-    ruby-trello (1.0.0)
-      activemodel
-      addressable (~> 2.3)
-      json
-      oauth (~> 0.4.5)
-      rest-client (~> 1.6.7)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,7 +28,6 @@ GEM
     activesupport (3.2.12)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    addressable (2.3.3)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.3.1.0)
@@ -99,7 +87,6 @@ GEM
     multi_json (1.7.1)
     nested_form (0.3.1)
     nokogiri (1.5.9)
-    oauth (0.4.7)
     orm_adapter (0.4.0)
     pg (0.14.1)
     polyglot (0.3.3)
@@ -152,8 +139,6 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     remotipart (1.0.5)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
     safe_yaml (0.8.6)
     sass (3.2.7)
     sass-rails (3.2.6)
@@ -199,7 +184,6 @@ DEPENDENCIES
   pry
   rails (= 3.2.12)
   rails_admin
-  ruby-trello!
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
   unicorn

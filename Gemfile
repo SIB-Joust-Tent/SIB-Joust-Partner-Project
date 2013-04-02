@@ -3,13 +3,11 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 gem 'pg'
 gem 'jquery-rails'
-gem "devise"
+gem 'devise'
 
 gem 'rails_admin'
 gem 'carrierwave'
 gem 'friendly_id'
-
-gem 'ruby-trello', git: 'git://github.com/jeremytregunna/ruby-trello.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
