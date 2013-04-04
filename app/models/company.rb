@@ -6,11 +6,13 @@ class Company < ActiveRecord::Base
   friendly_id :name, use: :slugged
   
   attr_accessible :description, :facebookhandle, :image, :location, :name, :rssfeed, 
-  				  			:tagline, :twitterhandle, :url
+  				  			:tagline, :twitterhandle, :url, :displayed_trello_lists
 
-  serialize :displayed_trello_boards, Array
+  serialize :displayed_trello_lists
 
-  def displayed_trello_boards_enum
+  has_many :users
+
+  def displayed_trello_lists_enum
   	public_key = ENV['TRELLO_PUBLIC_KEY']
 		token = ENV['TRELLO_TOKEN']
 
@@ -19,10 +21,4 @@ class Company < ActiveRecord::Base
 		lists[1].map{|l| [l["name"], l["id"]] }
   end
 
-  def has_displayed_trello_boards?(board)
-  	available_boards = self.boards.map{ |r| self.displayed_trello_boards_enum(r)}
-  	available_boards.include?(board)
-  end
-
-  has_many :users
 end
