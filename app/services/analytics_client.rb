@@ -4,7 +4,7 @@ class AnalyticsClient
   def initialize(start_date, end_date)
     @gattica = Gattica.new({:email => ENV['ANALYTICS_USER'], :password => ENV['ANALYTICS_PASSWORD']})
     @gattica.profile_id = @gattica.accounts.find{|a| a.title == "Pitchdeck"}.profile_id
-    @start_date = start_date.blank? ? '2008-01-01' : Date.strptime(start_date, '%m/%d/%Y').to_s
+    @start_date = start_date.blank? ? '2011-01-01' : Date.strptime(start_date, '%m/%d/%Y').to_s
     @end_date = end_date.blank? ? Date.today.to_s : Date.strptime(end_date, '%m/%d/%Y').to_s
   end
 
@@ -12,14 +12,20 @@ class AnalyticsClient
     data = @gattica.get({
       start_date: @start_date, 
       end_date: @end_date, 
-      metrics: ['pageViews', 'uniquePageviews', 'avgTimeOnPage']
+      dimensions: ['month', 'year'], 
+      metrics: ['visits'], 
+      sort: ['year']
     })
+    labels = []
+    data_points = []
 
-    data_hash = {}
-    data.points[0].metrics.each do |metric|
-      data_hash = data_hash.merge(metric)
+    data.to_h['points'].each do |point|
+      point_hash = point.to_h
+      month = Date::MONTHNAMES[point_hash["dimensions"][0][:month].to_i][0...3]
+      labels << "#{month} #{point_hash["dimensions"][1][:year]}"
+      data_points << point_hash["metrics"][0][:visits]
     end
 
-    data_hash
+    { labels: labels, data: data_points }
   end
 end
