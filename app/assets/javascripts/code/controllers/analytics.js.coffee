@@ -1,5 +1,5 @@
 @joustApp.controller 'AnalyticsCtrl', (['$scope', '$http', '$location', ($scope, $http, $location) ->
-  $http.get($location.path() + "/analytics.json").success((response) ->
+   $http({method: 'GET', url: $location.path() + "/analytics.json" }).success (response) ->
     ctx = document.getElementById("analytics-chart").getContext("2d")
     data = 
       labels: response.labels,
@@ -14,5 +14,4 @@
       ]
     
     myNewChart = new Chart(ctx).Line(data)
-  )
 ])

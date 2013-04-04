@@ -1,3 +1,3 @@
-@joustApp = angular.module("SIBJoust", [], ['$locationProvider', ($locationProvider) ->
+@joustApp = angular.module("SIBJoust", ["ui"], ['$locationProvider', ($locationProvider) ->
   $locationProvider.html5Mode(true)
 ])
