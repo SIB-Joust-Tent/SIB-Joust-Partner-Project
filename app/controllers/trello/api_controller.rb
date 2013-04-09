@@ -10,21 +10,20 @@ class Trello::ApiController < ApplicationController
 		# See https://trello.com/docs/api/index.html for more possible fields to add
 		lists = "fields=name&lists=open&list_fields=name"
 		cards = "&cards=visible&card_fields=idList,name,desc"
-
-		uri = URI.parse("https://api.trello.com/1/boards/511c01ca8f642cbd1c0053b5?#{lists}#{cards}&key=#{public_key}&token=#{token}")
-   	respond_with(JSON.parse uri.open.read)
-	end
-
-	def joust_activity_feed
-		public_key = ENV['TRELLO_PUBLIC_KEY']
-		token = ENV['TRELLO_TOKEN']
-
-		# See https://trello.com/docs/api/index.html for more possible fields to add
-		lists = "fields=name&lists=open&list_fields=name"
 		actions = "&actions=updateCard,createCard&action_fields=data,type,date"
 
-		uri = URI.parse("https://api.trello.com/1/boards/511c01ca8f642cbd1c0053b5?#{lists}#{actions}&key=#{public_key}&token=#{token}")
-		respond_with(JSON.parse uri.open.read)
-	end
+		hash = JSON.parse(URI.parse("https://api.trello.com/1/boards/511c01ca8f642cbd1c0053b5?#{lists}#{cards}#{actions}&key=#{public_key}&token=#{token}").open.read)
+		#respond_with(hash["actions"])
 
+		trello_event_array = []
+		hash["actions"].each do |event|
+			if event["type"] == "createCard"
+				trello_event_array.push(TrelloEvent.new(event["data"]["card"]["id"], event["type"], event["data"]["list"]["id"]))
+			end
+			if event["type"] == "updateCard" and event["data"].has_key?("listAfter")
+				trello_event_array.push(TrelloEvent.new(event["data"]["card"]["id"], event["type"], event["data"]["listAfter"]["id"]))
+			end
+		end
+		respond_with(trello_event_array)
+	end
 end

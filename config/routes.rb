@@ -16,7 +16,6 @@ SIBJoustPartnerProject::Application.routes.draw do
 
   namespace :trello do
     match 'joust_board' => 'api#joust_board'
-    match 'joust_activity_feed' => 'api#joust_activity_feed'
   end
 
   root :to => redirect('/companies/joust')
