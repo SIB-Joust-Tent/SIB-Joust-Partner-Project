@@ -22,4 +22,5 @@
         %input{ "ng-model" => "start_date", "ui-date" => "", placeholder: "Start Date" }
       .large-2.columns
         %input{ "ng-model" => "end_date", "ui-date" => "", placeholder: "End Date" }
-    %canvas#analytics-chart{ width: "800", height: "400", style: "width: 100%;" }
+    #analytics-chart-holder
+      %canvas#analytics-chart{ width: "800", height: "400", style: "width: 100%;" }
