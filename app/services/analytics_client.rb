@@ -9,6 +9,7 @@ class AnalyticsClient
   end
 
   def data
+    # 'entranceBounceRate', 'visitBounceRate'
     data = @gattica.get({
       start_date: @start_date, 
       end_date: @end_date, 

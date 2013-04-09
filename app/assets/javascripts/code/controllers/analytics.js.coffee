@@ -25,7 +25,32 @@
     if mm<10 then mm = '0' + mm
     "#{yyyy}-#{mm}-#{dd}"
 
-  $scope.$watch 'start_date + end_date', ->
+  getDataForSelectedMetric = ->
+    _.map($scope.analytics_data.data, (metric) ->
+        metric[$scope.analytic_metric.key]
+      )
+
+  createAnalyticsChart = ->
+    data = 
+      labels: $scope.analytics_data.labels,
+      datasets: [
+        {
+          fillColor : "rgba(151,187,205,0.5)",
+          strokeColor : "rgba(151,187,205,1)",
+          pointColor : "rgba(151,187,205,1)",
+          pointStrokeColor : "#fff",
+          data: getDataForSelectedMetric()
+        }
+      ]
+    
+    ctx = document.getElementById("analytics-chart").getContext("2d")
+    new Chart(ctx).Line(data)
+
+  $scope.$watch 'analytic_metric', ->
+    if $scope.analytics_data
+      createAnalyticsChart()
+
+  $scope.$watch 'start_date + end_date + analytic_metric', ->
     $("#analytics-chart-holder").spin()
     Company.analytics(
       {
@@ -34,7 +59,7 @@
         end_date: formatDate($scope.end_date)
       }, (response) ->
         $("#analytics-chart-holder").spin(false)
-        ctx = document.getElementById("analytics-chart").getContext("2d")
+        $scope.analytics_data = response
         $scope.totals = {}
         _.each(response.data, (metric) ->
           _.each(metric, (val, key) ->
@@ -42,21 +67,6 @@
             $scope.totals[key] += val
           )
         )
-        chart_values = _.map(response.data, (metric) ->
-          metric[$scope.analytic_metric.key]
-        )
-        data = 
-          labels: response.labels,
-          datasets: [
-            {
-              fillColor : "rgba(151,187,205,0.5)",
-              strokeColor : "rgba(151,187,205,1)",
-              pointColor : "rgba(151,187,205,1)",
-              pointStrokeColor : "#fff",
-              data: chart_values
-            }
-          ]
-        
-        myNewChart = new Chart(ctx).Line(data)
+        createAnalyticsChart()
     )
 ])
