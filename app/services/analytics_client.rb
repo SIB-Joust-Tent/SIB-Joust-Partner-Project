@@ -13,7 +13,7 @@ class AnalyticsClient
       start_date: @start_date, 
       end_date: @end_date, 
       dimensions: ['month', 'year'], 
-      metrics: ['visits'], 
+      metrics: ['visits', 'bounces', 'newVisits', 'percentNewVisits', 'pageViews', 'uniquePageviews', 'avgTimeOnPage', 'visitors', 'timeOnSite', 'avgTimeOnSite'], 
       sort: ['year']
     })
     labels = []
@@ -23,7 +23,9 @@ class AnalyticsClient
       point_hash = point.to_h
       month = Date::MONTHNAMES[point_hash["dimensions"][0][:month].to_i][0...3]
       labels << "#{month} #{point_hash["dimensions"][1][:year]}"
-      data_points << point_hash["metrics"][0][:visits]
+      data_hash = {}
+      point_hash["metrics"].each do |m| data_hash[m.keys[0]] = m.values[0] end
+      data_points << data_hash
     end
 
     { labels: labels, data: data_points }

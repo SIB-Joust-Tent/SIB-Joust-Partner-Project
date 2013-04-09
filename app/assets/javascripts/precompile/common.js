@@ -4,6 +4,7 @@
 //= require hamlcoffee
 //= require angular-resource
 //= require spin
+//= require underscore
 //= require jquery.spin
 //= require module
 //= require code/SIBJoust
