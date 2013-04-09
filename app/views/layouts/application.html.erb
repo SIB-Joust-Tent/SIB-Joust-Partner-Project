@@ -6,7 +6,10 @@
 <body ng-app="SIBJoust">
   <%= render 'shared/navbar' %>
   <div class="row <%= action_name %>-c">
-    <div class="large-12 columns">
+    <div class="large-3 columns">
+      <%= render "shared/sidenav" %>
+    </div>
+    <div class="large-9 columns" ng-view>
       <%= yield %>
     </div>
   </div>

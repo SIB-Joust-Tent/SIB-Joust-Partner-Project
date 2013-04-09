@@ -19,6 +19,8 @@ group :assets do
   gem "haml"
   gem 'asset_sync'
   gem 'uglifier', '>= 1.0.3'
+  gem 'haml_coffee_assets'
+  gem 'execjs'
 end
 
 group :development do

@@ -28,4 +28,8 @@ module ApplicationHelper
   def show_company? 
     user_signed_in? && current_user.company
   end
+
+  def current_company
+    user_signed_in? ? current_user.company : nil
+  end
 end

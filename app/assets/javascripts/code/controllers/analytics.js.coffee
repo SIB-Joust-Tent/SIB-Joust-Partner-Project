@@ -1,4 +1,4 @@
-@joustApp.controller 'AnalyticsCtrl', (['$scope', '$http', '$location', ($scope, $http, $location) ->
+@joustApp.controller 'AnalyticsCtrl', (['$scope', '$routeParams', 'Company', ($scope, $routeParams, Company) ->
   $scope.start_date = new Date(2011, 0, 1)
   $scope.end_date = new Date()
   formatDate = (date) ->
@@ -11,13 +11,12 @@
 
   $scope.$watch 'start_date + end_date', ->
     $("#analytics-chart-holder").spin()
-    $http(
-      method: 'GET', 
-      url: $location.path() + "/analytics.json",
-      params:
-        start_date: formatDate($scope.start_date),
+    Company.analytics(
+      {
+        id:$routeParams.id, 
+        start_date: formatDate($scope.start_date)
         end_date: formatDate($scope.end_date)
-      ).success (response) ->
+      }, (response) ->
         $("#analytics-chart-holder").spin(false)
         ctx = document.getElementById("analytics-chart").getContext("2d")
         data = 
@@ -33,4 +32,5 @@
           ]
         
         myNewChart = new Chart(ctx).Line(data)
+    )
 ])

@@ -1,0 +1,14 @@
+%ul
+  %li Page View: {{data.pageviews}}
+  %li Unique Page Views: {{data.uniquePageviews}}
+  %li Ang. Time on Page: {{data.avgTimeOnPage}}
+.row{ style: "margin-bottom: 0.2em; font-size: 0.9em;"}
+  .large-offset-8.large-4.columns
+    %span Show Analytics for Dates:
+.row
+  .large-offset-8.large-2.columns
+    %input{ "ng-model" => "start_date", "ui-date" => "", placeholder: "Start Date" }
+  .large-2.columns
+    %input{ "ng-model" => "end_date", "ui-date" => "", placeholder: "End Date" }
+#analytics-chart-holder
+  %canvas#analytics-chart{ width: "800", height: "400", style: "width: 100%;" }

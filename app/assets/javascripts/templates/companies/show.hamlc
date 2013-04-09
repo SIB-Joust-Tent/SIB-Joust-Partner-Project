@@ -1,0 +1,9 @@
+%h1 {{company_info.name}}
+%h4 {{company_info.high_concept}}
+%span {{company_info.company_url}}
+%img{ "ng-src" => "{{company_info.thumb_url}}", alt: "{{company.name}}"}
+%span{ "ng-repeat" => "market in company_info.markets"}
+  {{market.display_name}}
+%p
+  {{company_info.product_desc}}
+#company-timeline

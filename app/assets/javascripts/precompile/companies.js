@@ -1,7 +1,8 @@
 //= require .//common
+//= require_tree ../templates/companies
 //= require storyjs-embed
 //= require Chart
 //= require date
-//= require code/companies
-//= require code/controllers/angellist
+//= require code/services
+//= require code/controllers/main
 //= require code/controllers/analytics

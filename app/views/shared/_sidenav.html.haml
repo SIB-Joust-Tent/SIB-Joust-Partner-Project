@@ -1,0 +1,19 @@
+.section-container.accordion{ data: { section: "accordion" } }
+  %section.section
+    %p.title
+      %a{ href: "javascript:void(0)" }
+        Main
+    .content
+      %ul.side-nav
+        %li
+          %a{ href: "/companies/#{current_company.slug}" }
+            Home
+  %section.section
+    %p.title
+      %a{ href: "javascript:void(0)" }
+        Analytics
+    .content
+      %ul.side-nav
+        %li
+          %a{ href: "/companies/#{current_company.slug}/analytics" }
+            Google Analytics
