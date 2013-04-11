@@ -1,0 +1,19 @@
+@import "mixins";
+@import "foundation/foundation-global";
+
+body {
+  nav.top-bar {
+    li.name {
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  form#new_user {
+    .actions {
+      text-align: center;
+      margin-top: emCalc(20px);
+    }
+  }
+}

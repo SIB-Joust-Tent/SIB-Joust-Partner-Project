@@ -11,8 +11,8 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404184001) do
 
+ActiveRecord::Schema.define(:version => 20130402183800) do
   create_table "companies", :force => true do |t|
     t.string   "name"
     t.string   "tagline"
@@ -57,11 +57,12 @@ ActiveRecord::Schema.define(:version => 20130404184001) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
-    t.string   "name",                                   :null => false
-    t.string   "position",                               :null => false
+    t.string   "name",                   :default => "", :null => false
+    t.string   "position"
     t.string   "avatar"
     t.integer  "company_id"
     t.string   "slug"
+    t.string   "role"
   end
 
   add_index "users", ["company_id"], :name => "index_users_on_company_id"

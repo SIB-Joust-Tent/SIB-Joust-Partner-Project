@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= render 'shared/head' %>
+</head>
+<body class="<%= controller_name %>-c" ng-app="SIBJoust">
+  <%= render 'shared/navbar' %>
+  <div class="row <%= action_name %>-c">
+    <div class="large-12 columns">
+      <%= yield %>
+    </div>
+  </div>
+  <%= render 'shared/javascript' %>
+</body>
+</html>

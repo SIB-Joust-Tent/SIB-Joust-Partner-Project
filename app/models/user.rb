@@ -14,4 +14,8 @@ class User < ActiveRecord::Base
   belongs_to :company
 
   mount_uploader :avatar, AvatarUploader
+
+  def is?(test_role)
+    role && role == test_role.to_s
+  end
 end
