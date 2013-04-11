@@ -11,8 +11,8 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402183800) do
 
+ActiveRecord::Schema.define(:version => 20130402183800) do
   create_table "companies", :force => true do |t|
     t.string   "name"
     t.string   "tagline"
@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(:version => 20130402183800) do
     t.string   "description"
     t.string   "url"
     t.string   "image"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.string   "slug"
+    t.string   "displayed_trello_lists"
   end
 
   add_index "companies", ["slug"], :name => "index_companies_on_slug", :unique => true
