@@ -11,8 +11,10 @@
   })
   $http.jsonp("http://api.angel.co/1/startups/127295?callback=JSON_CALLBACK").success((response) ->
     $scope.company_info = response
-  ).error((data, status, headers, config) ->
-    # Jamie: Here. This is causing an error
-    i = 0
+  )
+
+  $http.jsonp("http://api.angel.co/1/startups/127295/roles?callback=JSON_CALLBACK").success((response) ->
+    $scope.founders = _.where(response.startup_roles, {role: "founder"})
+    $scope.team = _.difference(response.startup_roles, $scope.founders)
   )
 ])
