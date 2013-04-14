@@ -1,9 +1,15 @@
-%h1 {{company_info.name}}
-%h4 {{company_info.high_concept}}
-%span {{company_info.company_url}}
-%img{ "ng-src" => "{{company_info.thumb_url}}", alt: "{{company.name}}"}
-%span{ "ng-repeat" => "market in company_info.markets"}
-  {{market.display_name}}
-%p
-  {{company_info.product_desc}}
+.row
+  .large-2.columns
+    %img.logo{ "ng-src" => "{{company_info.thumb_url}}", alt: "{{company.name}}"}
+  .large-10.columns
+    %h1 {{company_info.name}}
+    %a.caslon{ href: "{{company_info.company_url}}"} {{company_info.company_url}}
+    %h5 {{company_info.high_concept}}
+    %span {{company_info.locations[0].display_name}}
+    %span{ "ng-repeat" => "market in company_info.markets"}
+      · {{market.display_name}}
+.row
+  .large-12.columns
+    %p.description
+      {{company_info.product_desc}}
 #company-timeline

@@ -1,6 +1,6 @@
 module ApplicationHelper
   def default_stylesheet_include
-    if File.exist?("#{Rails.root}/app/assets/stylesheets/precompile/#{controller_name}.css")
+    if File.exist?("#{Rails.root}/app/assets/stylesheets/precompile/#{controller_name}.css.scss")
       stylesheet_link_tag "precompile/#{controller_name}"
     else
       stylesheet_link_tag "precompile/common"
