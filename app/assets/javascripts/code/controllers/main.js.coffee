@@ -9,6 +9,10 @@
     css:        '/assets/timeline.css',
     js:         '/assets/timeline-min.js'
   })
+
+  $scope.getBgImg = (user) ->
+    { 'background': "url('" + user.image + "') no-repeat" }
+    
   $http.jsonp("http://api.angel.co/1/startups/127295?callback=JSON_CALLBACK").success((response) ->
     $scope.company_info = response
   )

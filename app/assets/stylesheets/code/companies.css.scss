@@ -35,3 +35,22 @@ h1 {
 .caslon {
   font-family: $caslon; 
 }
+
+.item {
+  text-align: center;
+
+  h5 {
+    color: #5a2316;
+    text-transform: uppercase;
+  }
+
+  .circular {
+    width: 140px;
+    max-width: 100%;
+    height: 140px;
+    margin: 20px auto;
+    padding: 20px;
+    @include prefixed(border-radius, 100% 100% 100% 100%);
+    @include prefixed(box-shadow, 0 0 10px rgba(0, 0, 0, .8));
+  }
+}
