@@ -5,12 +5,16 @@
 </head>
 <body ng-app="SIBJoust">
   <%= render 'shared/navbar' %>
-  <div class="row <%= action_name %>-c">
-    <div class="large-3 columns">
-      <%= render "shared/sidenav" %>
-    </div>
-    <div class="large-9 columns" ng-view>
-      <%= yield %>
+  <div class="containerFluid <%= action_name %>-c">
+    <div class="rowFluid">
+      <div class="containerNav">
+        <%= render "shared/sidenav" %>
+      </div>
+      <div class="containerMain">
+        <div ng-view>
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </div>
   <%= render 'shared/javascript' %>

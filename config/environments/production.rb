@@ -12,7 +12,7 @@ SIBJoustPartnerProject::Application.configure do
   config.static_cache_control = "public, max-age=2592000"
 
   config.assets.precompile += Dir["#{Rails.root}/app/assets/javascripts/precompile/*.js"].map{|s| s.gsub("#{Rails.root}/app/assets/javascripts/", "")}
-  config.assets.precompile += Dir["#{Rails.root}/app/assets/stylesheets/precompile/*"].map{|s| s.gsub("#{Rails.root}/app/assets/stylesheets/", "")}
+  config.assets.precompile += Dir["#{Rails.root}/app/assets/stylesheets/precompile/*.css.scss"].map{|s| s.gsub("#{Rails.root}/app/assets/stylesheets/", ".scss")}
   config.assets.compress = true
   config.assets.compile = true
   config.assets.digest = true

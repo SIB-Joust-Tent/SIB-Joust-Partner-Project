@@ -16,4 +16,64 @@ body {
       margin-top: emCalc(20px);
     }
   }
+
+  .containerFluid {
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    .rowFluid {
+      @include clearfix();
+      width: 100%;
+
+      .containerNav {
+        float: left;
+        width: 20%;
+      }
+
+      .containerMain {
+        float: left;
+        width: 80%;
+
+        > div {
+          @include prefixed(box-shadow, 0 0 5px #888);
+          background-color: #fff;
+          margin: 0 1.25em 1.25em 1.25em;
+          padding: 1.25em;
+        }
+      }
+    }
+  }
+
+  .section-container { 
+    .section {
+      border-top: 1px solid #dddee1;
+      font-family: $caslon;
+      font-size: 1em;
+
+      .title { 
+        a {
+          font-family: verdana,helvetica,arial,sans-serif;
+          font-size: 1em;
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+
+        &:hover {
+          background-color: #8E605F;
+          opacity: 0.6;
+          color: #e9e3d9;
+        }
+      }
+
+      &.active { 
+        .title {
+          a {
+            text-transform: uppercase;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
 }

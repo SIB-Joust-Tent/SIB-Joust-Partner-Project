@@ -15,7 +15,7 @@
 // $em-base: 16px;
 
 // We use these to control various global styles
-// $body-bg: #fff;
+$body-bg: rgb(233, 227, 217);
 // $body-font-color: #222;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
@@ -782,9 +782,9 @@
 // $section-function-factor: 10%;
 
 // These style the titles
-// $section-title-color: #333;
-// $section-title-bg: #efefef;
-// $section-title-bg-active: darken($section-title-bg, $section-function-factor);
+$section-title-color: #2C1311;
+$section-title-bg: #fff;
+$section-title-bg-active: #6D362B;
 // $section-title-bg-active-tabs: #fff;
 
 // Want to control border size, here ya go!
@@ -953,7 +953,7 @@
 //
 
 // Background color for the top bar
-// $topbar-bg: #111;
+$topbar-bg: #6D362B;
 
 // Height and margin
 // $topbar-height: 45px;

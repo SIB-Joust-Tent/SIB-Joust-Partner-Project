@@ -1,3 +1,5 @@
+$caslon: 'adobe-caslon-pro',verdana, sans-serif;
+
 @mixin prefixed($property, $value, $second:false) {
   @if $second {
     -webkit-#{$property}: $value, $second;
