@@ -17,4 +17,6 @@ SIBJoustPartnerProject::Application.routes.draw do
       get :analytics
     end
   end
+
+  resources :users
 end

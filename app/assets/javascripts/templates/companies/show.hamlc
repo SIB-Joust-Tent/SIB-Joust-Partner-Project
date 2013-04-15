@@ -16,10 +16,15 @@
 .row
   .large-4.columns{ "ng-repeat" => "founder in founders"}
     .item
-      .circular{ "ng-style" => "getBgImg(founder.tagged)", data: { "reveal-id" => "myModal" } }
+      .circular{ "ng-style" => "getBgImg(founder)", data: { "reveal-id" => "myModal" } }
       %a{ href: "#", data: {"reveal-id" => "myModal" } }
-        %h5 {{founder.tagged.name}}
+        %h4 {{founder.name}}
+        %h5 {{founder.position}}
       %span.social
-        %a{ href: "mailto:erichseifert@joust.io" }
+        %a{ "ng-show" => "founder.email", href: "mailto:{{founder.email}}" }
           %i.icon-envelope-alt.icon-large
+        %a{ "ng-show" => "founder.twitter", href: "https://twitter.com/{{founder.twitter}}", target: "_blank" }
+          %i.icon-twitter-sign.icon-large
+        %a{ "ng-show" => "founder.linkedin", href: "{{founder.linkedin}}", target: "_blank" }
+          %i.icon-linkedin-sign.icon-large
 #company-timeline
