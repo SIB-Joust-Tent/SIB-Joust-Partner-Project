@@ -1,5 +1,7 @@
+@import "code/mixins.css.scss";
 @import "code/foundation_and_overrides";
+@import "foundation";
 @import "font-awesome";
-@import "code/layout";
+@import "code/layout.css.scss";
 @import "jquery-ui";
 @import "angular-ui";

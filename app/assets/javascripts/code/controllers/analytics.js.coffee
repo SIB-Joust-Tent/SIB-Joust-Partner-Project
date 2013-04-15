@@ -6,12 +6,10 @@
     {name:'Total Visits', key:'visits'},
     {name:'Bounces', key:'bounces'},
     {name:'New Visits', key:'newVisits'},
-    {name:'% New Visits', key:'percentNewVisits'},
     {name:'Views', key:'pageviews'},
     {name:'Unique Views', key:'uniquePageviews'},
     {name:'Avg Time on Page', key:'avgTimeOnPage'},
     {name:'Visitors', key:'visitors'},
-    {name:'Time on Site', key:'timeOnSite'},
     {name:'Avg Time on Site', key:'avgTimeOnSite'}
   ]
 

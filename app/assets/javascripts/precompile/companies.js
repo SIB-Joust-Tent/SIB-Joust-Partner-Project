@@ -6,3 +6,4 @@
 //= require code/services
 //= require code/controllers/main
 //= require code/controllers/analytics
+//= require code/filters

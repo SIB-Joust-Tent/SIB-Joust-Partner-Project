@@ -1,4 +1,4 @@
-@joustApp = angular.module("SIBJoust", ["ui", "SIBJoustServices"], ['$locationProvider', ($locationProvider) ->
+@joustApp = angular.module("SIBJoust", ["ui", "SIBJoustServices", "SIBJoustFilters"], ['$locationProvider', ($locationProvider) ->
   $locationProvider.html5Mode(true)
 ]).config(['$routeProvider', ($routeProvider) ->
     $routeProvider.

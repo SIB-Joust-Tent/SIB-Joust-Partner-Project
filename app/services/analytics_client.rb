@@ -14,7 +14,7 @@ class AnalyticsClient
       start_date: @start_date, 
       end_date: @end_date, 
       dimensions: ['month', 'year'], 
-      metrics: ['visits', 'bounces', 'newVisits', 'percentNewVisits', 'pageViews', 'uniquePageviews', 'avgTimeOnPage', 'visitors', 'timeOnSite', 'avgTimeOnSite'], 
+      metrics: ['visits', 'bounces', 'newVisits', 'pageViews', 'uniquePageviews', 'avgTimeOnPage', 'visitors', 'avgTimeOnSite'], 
       sort: ['year']
     })
     labels = []
