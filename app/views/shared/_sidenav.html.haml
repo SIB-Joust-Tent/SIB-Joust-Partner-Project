@@ -9,12 +9,15 @@
           %a{ href: "/companies/#{current_company.slug}" }
             Overview
         %li
+          %a{ href: "/companies/#{current_company.slug}/team" }
+            The Team
+        %li
           %a{ href: "/companies/#{current_company.slug}/history" }
             History
   %section.section
     %p.title
       %a{ href: "javascript:void(0)" }
-        Analytics and Metrics
+        Analytics & Metrics
     .content
       %ul.side-nav
         %li
@@ -23,3 +26,15 @@
         %li
           %a{ href: "/companies/#{current_company.slug}/customers" }
             Customer Acquisition
+  %section.section
+    %p.title
+      %a{ href: "javascript:void(0)" }
+        Market & Competitors
+    .content
+      %ul.side-nav
+        %li
+          %a{ href: "/companies/#{current_company.slug}/market" }
+            Market
+        %li
+          %a{ href: "/companies/#{current_company.slug}/competitors" }
+            Competitors
