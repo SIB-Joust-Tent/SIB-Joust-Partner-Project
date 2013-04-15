@@ -27,4 +27,3 @@
           %i.icon-twitter-sign.icon-large
         %a{ "ng-show" => "founder.linkedin", href: "{{founder.linkedin}}", target: "_blank" }
           %i.icon-linkedin-sign.icon-large
-#company-timeline

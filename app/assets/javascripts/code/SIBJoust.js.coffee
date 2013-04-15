@@ -4,5 +4,6 @@
     $routeProvider.
       when('/companies/:id', {template: JST['companies/show'], controller: 'MainCtrl'}).
       when('/companies/:id/analytics', {template: JST['companies/analytics'], controller: 'AnalyticsCtrl'}).
+      when('/companies/:id/history', {template: JST['companies/history'], controller: 'HistoryCtrl'}).
       otherwise({redirectTo: '/companies/:id'})
   ])

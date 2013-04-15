@@ -4,6 +4,5 @@
 //= require Chart
 //= require date
 //= require code/services
-//= require code/controllers/main
-//= require code/controllers/analytics
+//= require_tree ../code/controllers
 //= require code/filters

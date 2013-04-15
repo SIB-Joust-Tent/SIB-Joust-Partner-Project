@@ -15,6 +15,7 @@ SIBJoustPartnerProject::Application.routes.draw do
   resources :companies do
     member do
       get :analytics
+      get :history
     end
   end
 

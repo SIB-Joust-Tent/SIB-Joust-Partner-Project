@@ -1,3 +1,4 @@
+%h1 Joust Analytics
 .row{ style: "margin-bottom: 0.2em; font-size: 0.9em;"}
   .large-offset-8.large-4.columns
     %span Show Analytics for Dates:

@@ -51,24 +51,26 @@ body {
       font-family: $caslon;
       font-size: 1em;
 
-      .title { 
+      p.title { 
         a {
           font-family: verdana,helvetica,arial,sans-serif;
           font-size: 1em;
           text-transform: uppercase;
           font-weight: 400;
-        }
 
-        &:hover {
-          background-color: #8E605F;
-          opacity: 0.6;
-          color: #e9e3d9;
+          &:hover {
+            background-color: #8E605F;
+            opacity: 0.6;
+            color: #e9e3d9;
+          }
         }
       }
 
       &.active { 
         .title {
           a {
+            background-color: #6D362B;
+            color: #e9e3d9;
             text-transform: uppercase;
             font-weight: 400;
           }

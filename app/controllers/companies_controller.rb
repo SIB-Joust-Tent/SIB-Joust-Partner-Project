@@ -29,6 +29,13 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def history
+    respond_to do |format|
+      format.html {}
+      format.json {}
+    end
+  end
+
   def new
     @company = Company.new
 
