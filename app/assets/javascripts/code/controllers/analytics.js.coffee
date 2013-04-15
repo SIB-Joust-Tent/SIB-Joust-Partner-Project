@@ -1,6 +1,7 @@
 @joustApp.controller 'AnalyticsCtrl', (['$scope', '$routeParams', 'Company', ($scope, $routeParams, Company) ->
   $scope.start_date = new Date(2011, 0, 1)
   $scope.end_date = new Date()
+  $scope.account = "Pitchdeck"
 
   $scope.metrics = [
     {name:'Total Visits', key:'visits'},
@@ -48,13 +49,14 @@
     if $scope.analytics_data
       createAnalyticsChart()
 
-  $scope.$watch 'start_date + end_date + analytic_metric', ->
+  $scope.$watch 'start_date + end_date + account', ->
     $("#analytics-chart-holder").spin()
     Company.analytics(
       {
-        id:$routeParams.id, 
+        id:$routeParams.id
         start_date: formatDate($scope.start_date)
         end_date: formatDate($scope.end_date)
+        account: $scope.account
       }, (response) ->
         $("#analytics-chart-holder").spin(false)
         $scope.analytics_data = response

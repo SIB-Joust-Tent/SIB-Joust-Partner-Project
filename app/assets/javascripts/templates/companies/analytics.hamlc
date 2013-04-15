@@ -1,8 +1,21 @@
-%h1 Joust Analytics
-.row{ style: "margin-bottom: 0.2em; font-size: 0.9em;"}
+.row
+  .large-8.columns
+    %h1 Joust Analytics
+  .large-4.columns
+    %h6 Show Analytics for:
+    .row
+      .large-6.columns
+        %label
+          %input{ type: "radio", "ng-model" => "account", value: "Pitchdeck"} 
+          Pitchdeck
+      .large-6.columns
+        %label
+          %input{ type: "radio", "ng-model" => "account", value: "Joust"} 
+          Joust
+.row{ style: "margin: 2em 0 0.5em 0; font-size: 0.9em;"}
   .large-offset-8.large-4.columns
     %span Show Analytics for Dates:
-.row
+.row{ style: "margin-bottom: 1em;"}
   .large-2.columns
     %select{ "ng-model" => "analytic_metric", required: "required", "ng-options" => "m.name for m in metrics" }
   .large-offset-6.large-2.columns

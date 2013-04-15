@@ -1,9 +1,9 @@
 class AnalyticsClient
   attr_accessor :start_date, :end_date
 
-  def initialize(start_date, end_date)
+  def initialize(start_date, end_date, account)
     @gattica = Gattica.new({:email => ENV['ANALYTICS_USER'], :password => ENV['ANALYTICS_PASSWORD']})
-    @gattica.profile_id = @gattica.accounts.find{|a| a.title == "Pitchdeck"}.profile_id
+    @gattica.profile_id = @gattica.accounts.find{|a| a.title == account}.profile_id
     @start_date = start_date
     @end_date = end_date
   end

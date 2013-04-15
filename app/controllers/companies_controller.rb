@@ -23,7 +23,7 @@ class CompaniesController < ApplicationController
       format.html {}
       format.json do
         @company = Company.find(params[:id])
-        analytics_client = AnalyticsClient.new(params[:start_date], params[:end_date])
+        analytics_client = AnalyticsClient.new(params[:start_date], params[:end_date], params[:account])
         respond_with analytics_client.data
       end
     end
