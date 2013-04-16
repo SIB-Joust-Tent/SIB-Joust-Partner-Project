@@ -9,7 +9,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, 
-  				  :name, :position, :avatar, :avatar_cache, :remove_avatar, :linkedin, :twitter
+  				  :name, :position, :avatar, :avatar_cache, :remove_avatar, :linkedin, :twitter,
+            :company_id, :role
 
   belongs_to :company
 
@@ -18,4 +19,9 @@ class User < ActiveRecord::Base
   def is?(test_role)
     role && role == test_role.to_s
   end
+
+  def role_enum
+    ['admin', 'employee', 'investor']
+  end
+
 end

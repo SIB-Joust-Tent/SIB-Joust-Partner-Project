@@ -5,10 +5,13 @@ class Company < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
   
-  attr_accessible :description, :facebookhandle, :image, :location, :name, :rssfeed, 
-  				  			:tagline, :twitterhandle, :url, :displayed_trello_lists
+  attr_accessible :description, :facebookhandle, :image, :image_cache, :remove_image, 
+                  :location, :name, :rssfeed, :tagline, :twitterhandle, :url, 
+                  :displayed_trello_lists
 
   serialize :displayed_trello_lists
+
+  mount_uploader :image, AvatarUploader
 
   has_many :users
 
