@@ -10,7 +10,7 @@ User.destroy_all
 Company.destroy_all
 joust = Company.create!({name: 'Joust', tagline: 'We make customer service not suck.', 
 						location: 'Cambridge, MA', facebookhandle: '', twitterhandle: '@JoustInc',
-						rssfeed: '', url: 'joust.io', description: ''})
+						rssfeed: '', url: 'joust.io', description: '', vision: "Joust strives to augment clarity in the world of communication.We seek to increase transparency by tackling issues such as misaligned expectations and tool ineffectiveness, while minimizing inefficiencies for our clients and their customers. Conquer is Joust's first implementation and will position Joust as a stable supplier of dynamic, cloud-based communication solutions."})
 employees = User.create!([
 	{name: 'Erich Seifert', position: 'CEO', password: password, password_confirmation: password, email: 'erichseifert@joust.io', avatar: File.open('app/assets/images/eSeifert.jpg', twitter: "erichseifert", linkedin: "http://www.linkedin.com/pub/erich-seifert/22/433/ab")}, 
 	{name: 'Mike Lilly', position: 'CTO', password: password, password_confirmation: password, email: 'mikelilly@joust.io', avatar: File.open('app/assets/images/mLilly.jpg'), twitter: "wackyanimation", linkedin: "http://www.linkedin.com/pub/mike-lilly/34/522/302"}, 

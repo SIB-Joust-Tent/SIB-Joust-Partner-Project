@@ -10,6 +10,7 @@ gem 'friendly_id'
 gem 'gattica', :git => 'git://github.com/chrisle/gattica.git'
 gem "fog"
 gem "cancan"
+gem "rabl"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

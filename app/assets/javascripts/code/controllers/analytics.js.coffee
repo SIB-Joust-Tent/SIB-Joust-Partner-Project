@@ -57,6 +57,7 @@
         start_date: formatDate($scope.start_date)
         end_date: formatDate($scope.end_date)
         account: $scope.account
+        action: 'analytics'
       }, (response) ->
         $("#analytics-chart-holder").spin(false)
         $scope.analytics_data = response

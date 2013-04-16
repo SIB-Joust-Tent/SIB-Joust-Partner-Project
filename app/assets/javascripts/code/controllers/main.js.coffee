@@ -1,4 +1,4 @@
-@joustApp.controller 'MainCtrl', (['$scope', '$http', 'User', ($scope, $http, User) ->
+@joustApp.controller 'MainCtrl', (['$scope', '$http', 'Company', ($scope, $http, Company) ->
   $scope.getBgImg = (user) ->
     { 'background': "url('" + user.image + "') no-repeat" }
 
@@ -15,7 +15,10 @@
     $scope.team = _.map($scope.team, (f) ->
       f.tagged
     )
-    User.query({}, (users) ->
+
+    Company.get({id: "joust"}, (company) ->
+      users = company.users
+      $scope.company = company
       # Merge the data we are storing with the data we get from Angellist
       for user in users
         team_member = _.findWhere($scope.founders, {name: user.name})

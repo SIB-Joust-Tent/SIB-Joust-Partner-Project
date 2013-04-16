@@ -6,7 +6,7 @@ class Company < ActiveRecord::Base
   friendly_id :name, use: :slugged
   
   attr_accessible :description, :facebookhandle, :image, :location, :name, :rssfeed, 
-  				  			:tagline, :twitterhandle, :url, :displayed_trello_lists
+  				  			:tagline, :twitterhandle, :url, :displayed_trello_lists, :vision
 
   serialize :displayed_trello_lists
 
