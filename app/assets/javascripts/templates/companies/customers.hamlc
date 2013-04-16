@@ -5,7 +5,22 @@
     #trello-chart-holder
       %canvas#trello-chart{ height: "400" }
   .large-3.columns
-    %h3 Customer Acquisition Updates
-    %ul
-      %li{ "ng-repeat" => "event in events" }
-        {{event.info}}
+    #customer-updates.panel
+      %h5 Customer Acquisition Updates
+      %ul.icons
+        %li{ "ng-repeat" => "event in events" }
+          %i.icon-plus{ "ng-show" => "event.action == 'added'"}
+          %i.icon-exchange{ "ng-show" => "event.action == 'moved'"}
+          %em {{event.date}}
+          %br
+          {{event.info}}
+%section{ style: "margin-top: 2em;" }
+  .clear
+    %h2.left Potential/Current Customers
+    %input.right{ "ng-model" => "query", placeholder: "Search", style: "font-size: 1em; padding: 0.3em; margin-top: 0.8em;" }
+  %section{ "ng-repeat" => "(list, cards) in cardsByList" }
+    %div{ "ng-repeat" => "card in cards | filter:query" }
+      %h4{ style: "display: inline;"} {{card.name}}
+      &nbsp;
+      %span.label{ "ng-class" => "{success:list == 'Customers', secondary:list == 'Leads'}" } {{list}}
+      %p {{card.desc}}

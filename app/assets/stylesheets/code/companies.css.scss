@@ -54,3 +54,22 @@ h1 {
     @include prefixed(box-shadow, 0 0 10px rgba(0, 0, 0, .8));
   }
 }
+
+.clear {
+  @include clearfix;
+}
+
+#customer-updates {
+  font-size: 0.9em;
+  height: 400px;
+  overflow: auto;
+
+  ul {
+    text-indent: -0.1em;
+
+    li {
+      border-bottom: 1px solid #bbb;
+      padding: 0.2em 0;
+    }
+  }
+}

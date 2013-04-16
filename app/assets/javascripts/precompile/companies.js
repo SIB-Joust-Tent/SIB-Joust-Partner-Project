@@ -1,4 +1,6 @@
 //= require .//common
+//= require foundation/foundation
+//= require foundation/foundation.section
 //= require_tree ../templates/companies
 //= require storyjs-embed
 //= require Chart
