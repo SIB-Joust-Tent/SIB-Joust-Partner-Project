@@ -1,4 +1,11 @@
 %h1 Customer Acquisition
 
-#trello-chart-holder
-  %canvas#trello-chart{ width: "800", height: "400", style: "width: 100%;" }
+.row
+  .large-9.columns
+    #trello-chart-holder
+      %canvas#trello-chart{ height: "400" }
+  .large-3.columns
+    %h3 Customer Acquisition Updates
+    %ul
+      %li{ "ng-repeat" => "event in events" }
+        {{event.info}}

@@ -1,5 +1,5 @@
 class TrelloEvent
-  def initialize(card_id, event, list_id)
-    @card_id, @event, @list_id = card_id, event, list_id
+  def initialize(card_id, event, list_id, date)
+    @card_id, @event, @list_id, @date = card_id, event, list_id, date
   end
 end

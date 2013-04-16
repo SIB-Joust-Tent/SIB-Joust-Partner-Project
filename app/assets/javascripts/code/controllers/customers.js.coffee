@@ -1,5 +1,9 @@
 @joustApp.controller 'CustomersCtrl', (['$scope', '$http', ($scope, $http) ->
   $http.get('/trello/joust_board.json', {}).success((response) ->
+    # Set the width based on the current window size
+    $("#trello-chart").attr('width', $("#trello-chart-holder").width())
+    $scope.lists = response.lists
+    $scope.cards = response.cards
     data = 
       labels : _.map(response.lists, (l) ->
         l.name
@@ -16,5 +20,15 @@
 
     ctx = document.getElementById("trello-chart").getContext("2d")
     new Chart(ctx).Bar(data)
+
+    $http.get('/trello/joust_activity.json', {}).success((response) ->
+      $scope.events = []
+      for event in response
+        card = _.findWhere($scope.cards, {id: event.card_id})
+        list = _.findWhere($scope.lists, {id: event.list_id})
+        action = "moved"
+        if event.event == "createCard" then action = "added"
+        if card && list then $scope.events.push({date: event.date, info: "#{card.name} was #{action} to #{list.name}"})
+    )
   )
 ])
