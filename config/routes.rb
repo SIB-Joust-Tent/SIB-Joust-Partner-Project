@@ -12,6 +12,11 @@ SIBJoustPartnerProject::Application.routes.draw do
     match 'press' => 'api#press'
   end
 
+  namespace :trello do
+    match 'joust_board' => 'api#joust_board'
+    match 'joust_activity' => 'api#joust_activity'
+  end
+
   resources :companies do
     member do
       get :analytics
