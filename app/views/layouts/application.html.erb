@@ -3,11 +3,11 @@
 <head>
 	<%= render 'shared/head' %>
 </head>
-<body ng-app="SIBJoust">
+<body>
   <%= render 'shared/navbar' %>
   <div class="containerFluid <%= action_name %>-c">
     <% if user_signed_in? && current_user.company %>
-      <div class="rowFluid">
+      <div class="rowFluid" ng-app="SIBJoust">
         <div class="containerNav">
           <%= render "shared/sidenav" %>
         </div>

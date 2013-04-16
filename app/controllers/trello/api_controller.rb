@@ -12,6 +12,8 @@ class Trello::ApiController < ApplicationController
 		cards = "&cards=visible&card_fields=idList,name,desc"
 
 		hash = JSON.parse(URI.parse("https://api.trello.com/1/boards/511c01ca8f642cbd1c0053b5?#{lists}#{cards}&key=#{public_key}&token=#{token}").open.read)
+		# Delete lists not configured to display
+		hash["lists"].delete_if{|l| !current_user.company.displayed_trello_lists.include?(l["id"])}
 		respond_with(hash)
 	end
 
