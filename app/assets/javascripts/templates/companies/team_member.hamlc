@@ -1,0 +1,13 @@
+.large-3.columns
+  .circular{ "ng-style" => "getBgImg(member)" }
+.large-9.columns{ style: "text-align: left;"}
+  %h4 {{member.name}}
+  %h5 {{member.position}}
+  %p {{member.bio}}
+  %span.social
+    %a{ "ng-show" => "member.email", href: "mailto:{{member.email}}" }
+      %i.icon-envelope-alt.icon-large
+    %a{ "ng-show" => "member.twitter", href: "https://twitter.com/{{member.twitter}}", target: "_blank" }
+      %i.icon-twitter-sign.icon-large
+    %a{ "ng-show" => "member.linkedin", href: "{{member.linkedin}}", target: "_blank" }
+      %i.icon-linkedin-sign.icon-large

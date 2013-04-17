@@ -22,6 +22,7 @@ SIBJoustPartnerProject::Application.routes.draw do
       get :analytics
       get :history
       get :customers
+      get :team
     end
   end
 

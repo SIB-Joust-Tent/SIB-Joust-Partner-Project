@@ -9,11 +9,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, 
-  				  :name, :position, :avatar, :avatar_cache, :remove_avatar, :linkedin, :twitter
+  				  :name, :position, :image, :image_cache, :remove_image, :linkedin, :twitter
 
   belongs_to :company
 
-  mount_uploader :avatar, AvatarUploader
+  mount_uploader :image, AvatarUploader
 
   def is?(test_role)
     role && role == test_role.to_s

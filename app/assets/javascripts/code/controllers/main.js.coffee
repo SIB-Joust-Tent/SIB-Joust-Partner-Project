@@ -8,7 +8,7 @@
 
   $http.jsonp("http://api.angel.co/1/startups/127295/roles?callback=JSON_CALLBACK").success((response) ->
     $scope.founders = _.where(response.startup_roles, {role: "founder"})
-    $scope.team = _.difference(response.startup_roles, $scope.founders)
+    $scope.team = _.where(response.startup_roles, {role: "employee"})
     $scope.founders = _.map($scope.founders, (f) ->
       f.tagged
     )

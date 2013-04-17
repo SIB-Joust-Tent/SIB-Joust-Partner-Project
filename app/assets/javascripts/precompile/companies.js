@@ -8,3 +8,4 @@
 //= require code/services
 //= require_tree ../code/controllers
 //= require code/filters
+//= require code/directives

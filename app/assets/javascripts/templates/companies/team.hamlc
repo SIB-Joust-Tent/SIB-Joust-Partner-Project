@@ -1,0 +1,3 @@
+%h1 The Joust Team
+.row.item.SIBTeamPartial.panel{ "ng-repeat" => "member in founders" } 
+.row.item.SIBTeamPartial.panel{ "ng-repeat" => "member in team"}
