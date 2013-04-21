@@ -1,0 +1,17 @@
+%article#company-market
+  .intro
+    %h3 PROBLEMS
+    %h5 Problems with current customer service tools create inefficiencies that translate into higher costs:
+    %section#chart
+      .row
+        .large-12.columns
+          %canvas#doughnutPro{ height: 150, width: 150 }
+          %p
+            %strong 75%
+            of consumers move to another channel when online customer service fails. Forrester estimates that unnecessary service costs to online retailers due to channel escalation are $22 million on average.
+      .row
+        .large-12.columns
+          %canvas#doughnutPro2{ height: 150, width: 150 }
+          %p
+            %strong 80%
+            of companies have nonintegrated communication channels: phone, email, chat, and web self-service. This leads to customers receiving inconsistent service, which increases costs and decreases customer satisfaction.

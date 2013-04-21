@@ -73,3 +73,39 @@ h1 {
     }
   }
 }
+
+#company-market {
+  .intro {
+    h3, h5 {
+      text-align: center;
+    }
+    
+    h3 {
+      text-align: center;
+      color: $red;
+    }
+
+    .row {
+      margin-top: 1em;
+    }
+
+    canvas {
+      float: left;
+      margin-right: 20px;
+    }
+
+    p {
+      font-size: 1em;
+      padding-top: emCalc(25px);
+      text-align: justify;
+      vertical-align: middle;
+      margin-top: 0.3em;
+
+      strong {
+        color: #5a2316;
+        font-size: 1.5em;
+        font-family: $caslon;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 $caslon: 'adobe-caslon-pro',verdana, sans-serif;
 $sans: "freight-sans-pro",sans-serif;
+$red: #5a2316;
 
 @mixin prefixed($property, $value, $second:false) {
   @if $second {
