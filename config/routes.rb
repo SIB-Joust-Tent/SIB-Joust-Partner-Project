@@ -24,6 +24,7 @@ SIBJoustPartnerProject::Application.routes.draw do
       get :customers
       get :team
       get :market
+      get :competitors
     end
   end
 

@@ -4,6 +4,7 @@
     $routeProvider.
       when('/companies/:id', {template: JST['companies/show'], controller: 'MainCtrl'}).
       when('/companies/:id/team', {template: JST['companies/team'], controller: 'MainCtrl'}).
+      when('/companies/:id/competitors', {template: JST['companies/competitors'], controller: 'CompetitorsCtrl'}).
       when('/companies/:id/market', {template: JST['companies/market'], controller: 'MarketCtrl'}).
       when('/companies/:id/analytics', {template: JST['companies/analytics'], controller: 'AnalyticsCtrl'}).
       when('/companies/:id/history', {template: JST['companies/history'], controller: 'HistoryCtrl'}).

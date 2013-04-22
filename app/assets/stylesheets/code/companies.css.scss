@@ -74,6 +74,36 @@ h1 {
   }
 }
 
+#company-competitors {
+  img {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #dddee1;
+  }
+
+  h2, h3 {
+    text-align: center;
+    color: #5a2316;
+  }
+  .competitors {
+    h3{
+      color: #A35E37;
+      font-size: 2em;
+      text-align: left;
+    }
+
+    em{
+      color: #5a2316;
+    }
+
+    p{
+      padding-top: 25px;
+      text-align: justify;
+      vertical-align: middle;
+    }
+  }
+}
+
 #company-market {
   .intro {
     h3, h5 {
@@ -136,21 +166,23 @@ h1 {
       }
     }
   }
+}
 
-  .references {
-    padding-top: 10px;
-    border-top: 1px solid #ccbeb2;
-    text-align: center;
+.references {
+  padding-top: 10px;
+  border-top: 1px solid #ccbeb2;
+  text-align: center;
+  font-size: 0.8em;
+  font-style: italic;
 
-    ul li{
-      list-style: none;
-      font-size: 0.7em;
-      font-style: italic;
-    }
+  ul li{
+    list-style: none;
+    font-size: 0.8em;
+    font-style: italic;
+  }
 
-    h5{
-      color: #5a2316;
-      font-size: 0.8em;
-    }
+  h5{
+    color: #5a2316;
+    font-size: 0.85em;
   }
 }

@@ -1,0 +1,161 @@
+#company-competitors
+  %article.containerContent
+    .intro
+      %h2 Competitive Analysis
+      %h3 Top 3 performers in CRM Web Customer Service Applications
+    .row
+      .large-10.columns.competitors
+        %h3 eGain
+        %p
+          %em Revenue in 2012:
+          $44 million
+        %em Strength
+        %p 
+          The eGain knowledgebase is the best among all the providers evaluated and provides for all five of the following levels of search: keyword matching, natural language, semantic understanding, intent-based search and case-based reasoning. This federated search approach allows customers to obtain very high accuracy when performing searches of internal or external sources.
+        %em Weakness
+        %p 
+          The eGain platform is 100% pure Java Platform, Enterprise Edition (Java EE) and it implements service-oriented architecture (SOA). There is no Microsoft .NET solution available or planned for the future.
+      .large-2.columns
+        %img{ "ng-src" => "/assets/egain_logo.png"}
+    .row
+      .large-10.columns.competitors
+        %h3 Oracle-RightNow Technologies
+        %p
+          %em Revenue in 2012:
+          Privately Held
+        %em Strength
+        %p 
+          Oracle RightNow has no video chat capabilities, but does support the use of how-to videos in the knowledgebase for delivery either as direct push interactions with customers during a Web chat or via the URL of the video embedded on a website or in an email link.
+        %em Weakness
+        %p 
+          The RightNow solution is only available in a SaaS model and no on-premises option exists. Customers looking for an on-premises solution will have to select another provider.
+      .large-2.columns
+        %img{ "ng-src" => "/assets/oracle_logo.png"}
+    .row
+      .large-10.columns.competitors
+        %h3 Kana (Enterprise)
+        %p
+          %em Revenue in 2012:
+          $100 million
+        %em Strength
+        %p 
+          Kana Enterprise provides multichannel analytics to derive insights from customer interactions  email, chat, phone), feedback (Web forms, surveys) and social media (Facebook, Twitter, blogs). Business rules can take multiple actions, like escalating the case, or sending out an email resolution or a knowledgebase article.
+        %em Weakness
+        %p 
+          Complete availability of all the Kana Enterprise channels and functionality in the cloud remains a road map objective. Although some components are available as SaaS, others are not. The entire product can be hosted, but more development is needed to migrate the entire solution to support a SaaS model.
+      .large-2.columns
+        %img{ "ng-src" => "/assets/kana_logo.png"}
+    %h3 Top 10 CRM Software Vendors by Market Share
+    %p{ style: "text-align: center;"}
+      %em Worldwide by Total Software Revenue Worldwide, 2010-2011 (Millions of Dollars)
+    .row
+      .large-8.large-offset-2.columns
+        %table
+          %thead
+            %tr
+              %th CRM Vendors
+              %th 2010
+              %th 2011
+              %th Share (%) 2010
+              %th Share (%) 2011
+          %tbody
+            %tr
+              %td SAP
+              %td 2,006.5
+              %td 2,324.8
+              %td 18.9
+              %td 19.3
+            %tr
+              %td Salesforce.com
+              %td 1,749.4
+              %td 2,006.5
+              %td 16.5
+              %td 16.7
+            %tr
+              %td Oracle
+              %td 1,476.3
+              %td 1,918.2
+              %td 13.9
+              %td 16.0
+            %tr
+              %td Microsoft
+              %td 793.3
+              %td 901.0
+              %td 7.5
+              %td 7.5
+            %tr
+              %td Amdocs
+              %td 408.5
+              %td 434.1
+              %td 3.9
+              %td 3.6
+            %tr
+              %td Adobe
+              %td 310.4
+              %td 425.9
+              %td 2.9
+              %td 3.5
+            %tr
+              %td IBM
+              %td 223.1
+              %td 358.4
+              %td 2.9
+              %td 3.0
+            %tr
+              %td SAS Institute
+              %td 223.1
+              %td 344.8
+              %td 2.1
+              %td 2.9
+            %tr
+              %td Cegedim
+              %td 218.7
+              %td 232.3
+              %td 2.1
+              %td 1.9
+            %tr
+              %td RightNow Technologies
+              %td 147.4
+              %td 187.4
+              %td 1.7
+              %td 1.6
+            %tr
+              %td
+                %em Other Vendors
+              %td
+                %em 3,026.7
+              %td
+                %em 2,883.3
+              %td
+                %em 27.7
+              %td
+                %em 24.0
+            %tr
+              %td
+                %strong Total CRM Market
+              %td
+                %strong 10,583.2
+              %td
+                %strong 12,016.4
+              %td
+                %strong 100.0
+              %td
+                %strong 100.0
+    .row
+      .large-10.large-offset-1.columns
+        %p 
+          %strong Important Notes:
+        %p
+          %em The top 10 CRM vendors made up about 49% of the CRM software market.
+        %p
+          %em SaaS has the potential to disrupt market share. SaaS lowers barriers to switching vendors, and unlike on-premise systems which require fork lift rip-and-replace projects which if reluctantly elected, consume months if not years along with hefty capital expenditures, SaaS CRM systems can often be replaced in weeks and without significant capital expenditures or significant changes to operating expenses. This creates a new variable which is likely to influence market share rankings and alter the CRM leaderboard in the years to come.
+    .row
+      .large-10.large-offset-1.columns.references
+        %h5 References
+        %ul
+          %li
+            Gartner, Magic Quadrant for CRM Web Customer Service Applications 2013 - 
+            %a{ href: "http://www.gartner.com/technology/reprints.do?id=1-1E2UHRZ&ct=130213&st=sb" }http://www.gartner.com/technology/reprints.do?id=1-1E2UHRZ&ct=130213&st=sb
+          %li
+            Sizing Up the CRM Software Market - 
+            %a{ href: "http://www.crmsearch.com/crm-market.php" } http://www.crmsearch.com/crm-market.php
