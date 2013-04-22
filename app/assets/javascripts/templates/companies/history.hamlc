@@ -1,3 +1,4 @@
-.containerContent
-  %h1 The History of Joust
-  #company-timeline
+#company-history
+  .containerContent
+    %h1 The History of Joust
+    #company-timeline

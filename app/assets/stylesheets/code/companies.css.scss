@@ -186,3 +186,23 @@ h1 {
     font-size: 0.85em;
   }
 }
+
+#company-history {
+  h1 {
+    margin-bottom: 1.2em;
+  }
+}
+
+#company-team {
+  .intro {
+    margin: 2em 0;
+
+    h3 {
+      margin-top: 1.5em;
+    }
+  }
+
+  canvas {
+    margin-right: 20px;
+  }
+}

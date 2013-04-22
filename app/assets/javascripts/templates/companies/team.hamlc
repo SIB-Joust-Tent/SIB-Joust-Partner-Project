@@ -1,4 +1,10 @@
-.containerContent
-  %h1 The Joust Team
-  .row.item.SIBTeamPartial.panel{ "ng-repeat" => "member in founders" } 
-  .row.item.SIBTeamPartial.panel{ "ng-repeat" => "member in team"}
+#company-team
+  .containerContent
+    %h1 The Joust Team
+    .intro.clear
+      %canvas#teamGrowth.left{ height: "300", width: "300" }
+      %h3 Growth Per Year
+      %p
+        Originally founded by Mike Lilly in 2010, the Joust team has now grown to {{founders.length + team.length}} full-time team members.
+    .row.item.SIBTeamPartial.panel{ "ng-repeat" => "member in founders" } 
+    .row.item.SIBTeamPartial.panel{ "ng-repeat" => "member in team"}

@@ -19,6 +19,37 @@
     Company.get({id: "joust"}, (company) ->
       users = company.users
       $scope.company = company
+
+      team = _.union(_.where(response.startup_roles, {role: "employee"}), _.where(response.startup_roles, {role: "founder"}))
+      yearArray = _.map(team, (r) -> 
+        parseInt(r.created_at.substring(0, 4))
+      )
+
+      yearArray = _.sortBy(yearArray, (num) ->
+        num
+      )
+
+      data = []
+      yearCounts = _.countBy(yearArray, (num) ->
+        num
+      )
+
+      for year in _.uniq(yearArray)
+        data.push(yearCounts[year])
+      
+      barChartData = {
+        labels : _.uniq(yearArray),
+        datasets : [
+          {
+            fillColor : "rgba(41,59,93,0.5)",
+            strokeColor : "rgba(41,59,93,1)",
+            data : data
+          }
+        ]
+      }
+
+      myLine = new Chart(document.getElementById("teamGrowth").getContext("2d")).Bar(barChartData)
+
       # Merge the data we are storing with the data we get from Angellist
       for user in users
         team_member = _.findWhere($scope.founders, {name: user.name})
