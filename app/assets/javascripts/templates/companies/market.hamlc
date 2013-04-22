@@ -1,7 +1,7 @@
 #company-market
   %article.containerContent
     .intro
-      %h3 PROBLEMS
+      %h2 PROBLEMS
       %h5 Problems with current customer service tools create inefficiencies that translate into higher costs:
       .row
         .large-12.columns

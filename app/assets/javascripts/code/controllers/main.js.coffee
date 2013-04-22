@@ -41,8 +41,8 @@
         labels : _.uniq(yearArray),
         datasets : [
           {
-            fillColor : "rgba(41,59,93,0.5)",
-            strokeColor : "rgba(41,59,93,1)",
+            fillColor : "rgba(163,84,55,0.7)",
+            strokeColor : "rgba(163,84,55,1)",
             data : data
           }
         ]

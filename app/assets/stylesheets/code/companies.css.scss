@@ -188,8 +188,8 @@ h1 {
 }
 
 #company-history {
-  h1 {
-    margin-bottom: 1.2em;
+  .intro {
+    margin-bottom: 2em;
   }
 }
 
@@ -197,12 +197,20 @@ h1 {
   .intro {
     margin: 2em 0;
 
-    h3 {
+    h3, h4 {
       margin-top: 1.5em;
     }
   }
 
   canvas {
-    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+#company-analytics {
+  .analyticsForm {
+    .row {
+      margin-top: 0.4em;
+    }
   }
 }

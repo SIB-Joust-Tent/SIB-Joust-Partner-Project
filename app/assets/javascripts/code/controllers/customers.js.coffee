@@ -13,8 +13,8 @@
       )
       datasets : [
         {
-          fillColor : "rgba(151,187,205,0.5)",
-          strokeColor : "rgba(151,187,205,1)",
+          fillColor : "rgba(163,84,55,0.7)",
+          strokeColor : "rgba(163,84,55,1)",
           data : _.map(response.lists, (l) ->
             _.where(response.cards, {idList: l.id}).length 
           )

@@ -1,4 +1,9 @@
 #company-history
   .containerContent
-    %h1 The History of Joust
+    .intro
+      %h2 The History of Joust
+      %p
+        Joust was founded in 2010 and has since experienced many milestones and accomplishments, with many more planned for the future. You can view these accomplishments and milestones in the timeline below.
+      %p 
+        %em The timeline scrolls through time horizontally. The content displayed above the timeline scrolls vertically if necessary.
     #company-timeline

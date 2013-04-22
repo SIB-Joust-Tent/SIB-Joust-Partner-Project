@@ -13,9 +13,9 @@
     .large-12.columns
       %p.description
         {{company_info.product_desc}}
-  %h2 The {{company_info.name}} Vision
+  %h2.text-left The {{company_info.name}} Vision
   %p {{company.vision}}
-  %h2 Founding Team
+  %h2.text-left Founding Team
   .row
     .large-4.columns{ "ng-repeat" => "founder in founders"}
       .item

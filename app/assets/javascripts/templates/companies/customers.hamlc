@@ -1,6 +1,6 @@
 .containerContent
-  %h1 Customer Acquisition
-
+  %h2 Customer Acquisition
+  %p Below are live updates of Joust's customer acquisition progress, from leads to paying customers. The updates on the right show when a potential customer was added or updated.
   .row
     .large-9.columns
       #trello-chart-holder

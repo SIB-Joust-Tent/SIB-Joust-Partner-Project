@@ -7,5 +7,6 @@
 //= require underscore
 //= require jquery.spin
 //= require module
+//= require code/common
 //= require code/SIBJoust
 $(document).foundation();

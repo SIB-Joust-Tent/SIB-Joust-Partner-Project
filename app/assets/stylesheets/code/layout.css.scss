@@ -44,6 +44,11 @@ body {
           background-color: #fff;
           margin: 0 1.25em 2em 1.25em;
           padding: 2em 3em;
+
+          h2, h3 {
+            color: $red;
+            text-align: center;
+          }
         }
       }
     }
@@ -83,4 +88,8 @@ body {
       }
     }
   }
+}
+
+.text-left {
+  text-align: left;
 }

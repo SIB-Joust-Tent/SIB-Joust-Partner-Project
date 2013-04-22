@@ -1,7 +1,9 @@
 @joustApp.controller 'AnalyticsCtrl', (['$scope', '$routeParams', 'Company', ($scope, $routeParams, Company) ->
-  $scope.start_date = new Date(2011, 0, 1)
+  $scope.start_date = new Date(2012, 0, 1)
   $scope.end_date = new Date()
   $scope.account = "Pitchdeck"
+
+  $("#analytics-chart").attr('width', $("#analytics-chart").parent().width())
 
   $scope.metrics = [
     {name:'Total Visits', key:'visits'},
@@ -34,9 +36,9 @@
       labels: $scope.analytics_data.labels,
       datasets: [
         {
-          fillColor : "rgba(151,187,205,0.5)",
-          strokeColor : "rgba(151,187,205,1)",
-          pointColor : "rgba(151,187,205,1)",
+          fillColor : "rgba(163,84,55,0.7)",
+          strokeColor : "rgba(163,84,55,1)",
+          pointColor : "rgba(163,84,55,1)",
           pointStrokeColor : "#fff",
           data: getDataForSelectedMetric()
         }

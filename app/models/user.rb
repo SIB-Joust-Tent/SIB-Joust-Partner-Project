@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, 
-                  :name, :position, :image, :image_cache, :remove_image, :linkedin, :twitter
+                  :name, :position, :image, :image_cache, :remove_image, :linkedin, :twitter, :company_id, :role
 
 
   belongs_to :company

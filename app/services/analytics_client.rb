@@ -19,11 +19,11 @@ class AnalyticsClient
     })
     labels = []
     data_points = []
-
+    
     data.to_h['points'].each do |point|
       point_hash = point.to_h
       month = Date::MONTHNAMES[point_hash["dimensions"][0][:month].to_i][0...3]
-      labels << "#{month} #{point_hash["dimensions"][1][:year]}"
+      labels << "#{month} #{point_hash["dimensions"][1][:year][2..4]}"
       data_hash = {}
       point_hash["metrics"].each do |m| data_hash[m.keys[0]] = m.values[0] end
       data_points << data_hash
