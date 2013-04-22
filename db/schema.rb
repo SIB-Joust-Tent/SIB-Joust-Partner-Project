@@ -63,9 +63,9 @@ ActiveRecord::Schema.define(:version => 20130417181311) do
     t.string   "image"
     t.integer  "company_id"
     t.string   "slug"
-    t.string   "role"
     t.string   "twitter"
     t.string   "linkedin"
+    t.string   "role"
   end
 
   add_index "users", ["company_id"], :name => "index_users_on_company_id"

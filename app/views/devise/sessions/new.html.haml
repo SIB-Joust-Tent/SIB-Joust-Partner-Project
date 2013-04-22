@@ -1,6 +1,9 @@
 %h1 Joust Investor Dashboard
 %p Please login to view the dasboard
 .panel
+  - if flash[:alert]
+    %span.alert.label
+      = content_tag(:div, flash[:alert], :id => "flash_alert") 
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     %fieldset
       %legend
