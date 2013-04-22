@@ -1,31 +1,32 @@
-.row
-  .large-2.columns
-    %img.logo{ "ng-src" => "{{company_info.thumb_url}}", alt: "{{company.name}}"}
-  .large-10.columns
-    %h1 {{company_info.name}}
-    %a.caslon{ href: "{{company_info.company_url}}"} {{company_info.company_url}}
-    %h5 {{company_info.high_concept}}
-    %span {{company_info.locations[0].display_name}}
-    %span{ "ng-repeat" => "market in company_info.markets"}
-      · {{market.display_name}}
-.row
-  .large-12.columns
-    %p.description
-      {{company_info.product_desc}}
-%h2 The {{company_info.name}} Vision
-%p {{company.vision}}
-%h2 Founding Team
-.row
-  .large-4.columns{ "ng-repeat" => "founder in founders"}
-    .item
-      .circular{ "ng-style" => "getBgImg(founder)", data: { "reveal-id" => "myModal" } }
-      %a{ href: "#", data: {"reveal-id" => "myModal" } }
-        %h4 {{founder.name}}
-        %h5 {{founder.position}}
-      %span.social
-        %a{ "ng-show" => "founder.email", href: "mailto:{{founder.email}}" }
-          %i.icon-envelope-alt.icon-large
-        %a{ "ng-show" => "founder.twitter", href: "https://twitter.com/{{founder.twitter}}", target: "_blank" }
-          %i.icon-twitter-sign.icon-large
-        %a{ "ng-show" => "founder.linkedin", href: "{{founder.linkedin}}", target: "_blank" }
-          %i.icon-linkedin-sign.icon-large
+.containerContent
+  .row
+    .large-2.columns
+      %img.logo{ "ng-src" => "{{company_info.thumb_url}}", alt: "{{company.name}}"}
+    .large-10.columns
+      %h1 {{company_info.name}}
+      %a.caslon{ href: "{{company_info.company_url}}"} {{company_info.company_url}}
+      %h5 {{company_info.high_concept}}
+      %span {{company_info.locations[0].display_name}}
+      %span{ "ng-repeat" => "market in company_info.markets"}
+        · {{market.display_name}}
+  .row
+    .large-12.columns
+      %p.description
+        {{company_info.product_desc}}
+  %h2 The {{company_info.name}} Vision
+  %p {{company.vision}}
+  %h2 Founding Team
+  .row
+    .large-4.columns{ "ng-repeat" => "founder in founders"}
+      .item
+        .circular{ "ng-style" => "getBgImg(founder)", data: { "reveal-id" => "myModal" } }
+        %a{ href: "#", data: {"reveal-id" => "myModal" } }
+          %h4 {{founder.name}}
+          %h5 {{founder.position}}
+        %span.social
+          %a{ "ng-show" => "founder.email", href: "mailto:{{founder.email}}" }
+            %i.icon-envelope-alt.icon-large
+          %a{ "ng-show" => "founder.twitter", href: "https://twitter.com/{{founder.twitter}}", target: "_blank" }
+            %i.icon-twitter-sign.icon-large
+          %a{ "ng-show" => "founder.linkedin", href: "{{founder.linkedin}}", target: "_blank" }
+            %i.icon-linkedin-sign.icon-large

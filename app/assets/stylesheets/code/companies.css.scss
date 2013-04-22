@@ -79,7 +79,7 @@ h1 {
     h3, h5 {
       text-align: center;
     }
-    
+
     h3 {
       text-align: center;
       color: $red;
@@ -106,6 +106,51 @@ h1 {
         font-size: 1.5em;
         font-family: $caslon;
       }
+    }
+
+    ol {
+      li {
+        p {
+          padding: 8px;
+          border-left: 1px solid #999;
+        }
+      }
+    }
+
+    .icons {
+      text-align: center;
+
+      .row {
+        margin-top: 2em;
+      }
+
+      i {
+        background-color: #293B5D;
+        color: #FFF;
+        padding: 0.3em 0.5em;
+        font-size: 2.5em;
+        @include prefixed(border-radius, 100%);
+      }
+      h5 {
+        margin-top: 1.5em;
+      }
+    }
+  }
+
+  .references {
+    padding-top: 10px;
+    border-top: 1px solid #ccbeb2;
+    text-align: center;
+
+    ul li{
+      list-style: none;
+      font-size: 0.7em;
+      font-style: italic;
+    }
+
+    h5{
+      color: #5a2316;
+      font-size: 0.8em;
     }
   }
 }

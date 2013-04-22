@@ -11,10 +11,8 @@
         <div class="containerNav">
           <%= render "shared/sidenav" %>
         </div>
-        <div class="containerMain">
-          <div ng-view>
-            <%= yield %>
-          </div>
+        <div class="containerMain" ng-view>
+          <%= yield %>
         </div>
       </div>
     <% else %>

@@ -1,32 +1,33 @@
-.row
-  .large-8.columns
-    %h1 Joust Analytics
-  .large-4.columns
-    %h6 Show Analytics for:
-    .row
-      .large-6.columns
-        %label
-          %input{ type: "radio", "ng-model" => "account", value: "Pitchdeck"} 
-          Pitchdeck
-      .large-6.columns
-        %label
-          %input{ type: "radio", "ng-model" => "account", value: "Joust"} 
-          Joust
-.row{ style: "margin: 2em 0 0.5em 0; font-size: 0.9em;"}
-  .large-offset-8.large-4.columns
-    %span Show Analytics for Dates:
-.row{ style: "margin-bottom: 1em;"}
-  .large-2.columns
-    %select{ "ng-model" => "analytic_metric", required: "required", "ng-options" => "m.name for m in metrics" }
-  .large-offset-6.large-2.columns
-    %input{ "ng-model" => "start_date", "ui-date" => "", placeholder: "Start Date" }
-  .large-2.columns
-    %input{ "ng-model" => "end_date", "ui-date" => "", placeholder: "End Date" }
-#analytics-chart-holder
-  %canvas#analytics-chart{ width: "800", height: "400", style: "width: 100%;" }
-%ul.large-block-grid-4{ style: "margin-top: 2em; text-align: center;"}
-  %li{ "ng-repeat" => "metric in metrics"} 
-    %h5
-      {{metric.name}}
-    %span
-      {{totals[metric.key] | roundFloat}}
+.containerContent
+  .row
+    .large-8.columns
+      %h1 Joust Analytics
+    .large-4.columns
+      %h6 Show Analytics for:
+      .row
+        .large-6.columns
+          %label
+            %input{ type: "radio", "ng-model" => "account", value: "Pitchdeck"} 
+            Pitchdeck
+        .large-6.columns
+          %label
+            %input{ type: "radio", "ng-model" => "account", value: "Joust"} 
+            Joust
+  .row{ style: "margin: 2em 0 0.5em 0; font-size: 0.9em;"}
+    .large-offset-8.large-4.columns
+      %span Show Analytics for Dates:
+  .row{ style: "margin-bottom: 1em;"}
+    .large-2.columns
+      %select{ "ng-model" => "analytic_metric", required: "required", "ng-options" => "m.name for m in metrics" }
+    .large-offset-6.large-2.columns
+      %input{ "ng-model" => "start_date", "ui-date" => "", placeholder: "Start Date" }
+    .large-2.columns
+      %input{ "ng-model" => "end_date", "ui-date" => "", placeholder: "End Date" }
+  #analytics-chart-holder
+    %canvas#analytics-chart{ width: "800", height: "400", style: "width: 100%;" }
+  %ul.large-block-grid-4{ style: "margin-top: 2em; text-align: center;"}
+    %li{ "ng-repeat" => "metric in metrics"} 
+      %h5
+        {{metric.name}}
+      %span
+        {{totals[metric.key] | roundFloat}}

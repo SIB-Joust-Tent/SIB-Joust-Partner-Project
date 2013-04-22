@@ -1,8 +1,8 @@
-%article#company-market
-  .intro
-    %h3 PROBLEMS
-    %h5 Problems with current customer service tools create inefficiencies that translate into higher costs:
-    %section#chart
+#company-market
+  %article.containerContent
+    .intro
+      %h3 PROBLEMS
+      %h5 Problems with current customer service tools create inefficiencies that translate into higher costs:
       .row
         .large-12.columns
           %canvas#doughnutPro{ height: 150, width: 150 }
@@ -15,3 +15,133 @@
           %p
             %strong 80%
             of companies have nonintegrated communication channels: phone, email, chat, and web self-service. This leads to customers receiving inconsistent service, which increases costs and decreases customer satisfaction.
+      .row
+        .large-12.columns
+          %canvas#doughnutPro3{ height: 150, width: 150 }
+          %p
+            The revenue impact from a
+            %strong 10% 
+            \-point improvement in a company’s customer experience score, as measured by Forrester’s Customer Experience Index, translates into more than $1 billion.
+  %article.containerContent
+    .intro
+      %h3 GROWING MARKET
+      %h5 The web customer service market is expected to continue growing:
+      %p Over the past three years:
+      .row
+        .large-12.columns
+          %canvas#doughnutMark{ height: 100, width: 100 }
+          %p
+            %strong 12%
+            rise in web self-service usage
+      .row
+        .large-12.columns
+          %canvas#doughnutMark2{ height: 100, width: 100 }
+          %p
+            %strong 24%
+            rise in chat usage
+      .row
+        .large-12.columns
+          %canvas#doughnutMark3{ height: 100, width: 100 }
+          %p
+            %strong 25%
+            rise in community usage for customer service
+      %p As defined by Gartner:
+      %p
+        %strong Self-service:
+        Web-based self-service supported by a knowledge management engine and database through which to perform advanced content delivery. The key focus is to achieve at least an 85% relevance of response.
+      %p
+        %strong Chat:
+        Online Web text-based interaction with a live agent or speech-based interaction with a virtual assistant. The Web chat sessions are routed in a similar manner to voice calls, and a group of text chat agents will engage with the client when receiving an incoming Web chat request.
+      %p
+        %strong Community Usage:
+        Harvesting of content from social networks and updating the knowledge base with the content to allow better resolution of recurring problems across all interaction channels.
+  %article.containerContent
+    .intro
+      %h3 PROJECTED MARKET SIZE
+      %h5 Market Size for Web Customer Service
+      %div{ style: "text-align: center;" }
+        %em (in billions of dollars)
+        %br
+        %canvas#barMark{ height: "300", width: "450", style: "float: none;" }
+      %p The web customer service market sits at an estimated $1.2 billion by 2015, of which Joust will pursue 1/3 of for a market size of $400 million.
+      %p The market of CRM web customer service applications is defined by eight primary building blocks:
+      .icons
+        .row
+          .large-3.columns
+            %i.icon-lightbulb
+            %h5 Knowledge base for self-service
+          .large-3.columns
+            %i.icon-envelope
+            %h5 Email response management
+          .large-3.columns
+            %i.icon-comments-alt
+            %h5 Web chat
+          .large-3.columns
+            %i.icon-laptop
+            %h5 Collaborative browsing
+        .row
+          .large-3.columns
+            %i.icon-user
+            %h5 Virtual assistant
+          .large-3.columns
+            %i.icon-facetime-video
+            %h5 Video services
+          .large-3.columns
+            %i.icon-mobile-phone
+            %h5 Mobile customer service with SMS
+          .large-3.columns
+            %i.icon-group
+            %h5 Social services
+      %p Joust expects to enter the market as a unified, cloud-based platform that simplifies customer service by combining the power and convenience of a knowledge base with the speed and intimacy of live support as a solution to current customer service tools’ lack of interoperability and significant platform limitations.
+  %article.containerContent
+    .intro
+      %h3 SUPPORTING TRENDS
+      %h5 Knowledge Management Is the most valuable player in customer service. Expect companies to:
+      .row
+        .large-offset-2.large-8.columns
+          %ol
+            %li
+              %p
+                %em Make content capture from disparate sources (like email, social media interactions, and forum threads) easier
+            %li
+              %p
+                %em Make locating the right content easier
+            %li
+              %p
+                %em Allow agents and customers to rate and comment on content
+            %li
+              %p
+                %em Publish content without arduous review cycles
+            %li
+              %p
+                %em Tightly link case management and knowledge management solutions for greater service efficiencies
+            %li
+              %p
+                %em Be more data-driven by using analytics to obtain insights on the value of content
+      %p Best-of-breed solutions are struggling to prove their value against suite solutions.
+      %p 
+        Organizations become increasingly interested in SaaS solutions for customer service - an estimated 
+        %strong 70% 
+        of organizations are either currently using SaaS solutions for horizontal business processes like CRM or are interested in doing so.
+    .row
+      .large-10.large-offset-1.columns.references
+        %h5 References:
+        %ul
+          %li
+            Forrester - “The Forrester Wave: CRM Suite Customer Service Solutions, Q3 2012."
+            %a{ href: "http://www.microsoft.com/en-us/news/itanalyst/docs/07-11-12CRMCustomer.pdf" } http://www.microsoft.com/en-us/news/itanalyst/docs/07-11-12CRMCustomer.pdf
+          %li 
+            Forrester - “Forrester’s Top 15 Trends for Customer Service in 2013.”
+            %a{ href: "http://blogs.forrester.com/kate_leggett/13-01-14-forresters_top_15_trends_for_customer_service_in_2013" } http://blogs.forrester.com/kate_leggett/13-01-14-forresters_top_15_trends_for_customer_service_in_2013
+          %li 
+            Gartner - “Magic Quadrant for CRM Web Customer Service Applications.”
+            %a{ href: "http://www.gartner.com/technology/reprints.do?id=1-1E2UHRZ&ct=130213&st=sb" }http://www.gartner.com/technology/reprints.do?id=1-1E2UHRZ&ct=130213&st=sb
+          %li Gartner - “Magic Quadrant for CRM Web Customer Service Applications.”
+            %a{ href: "http://www.gartner.com/technology/reprints.do?id=1-1E2UHRZ&ct=130213&st=sb" }http://www.gartner.com/technology/reprints.do?id=1-1E2UHRZ&ct=130213&st=sb
+          %li
+            “Market Sizing for Dummies: Menschik Shares the Smart Way to Size Up an Opportunity.” 
+            %a{ href: "http://link.brightcove.com/services/player/bcpid2091790238001?bckey=AQ~~,AAAAAx_3Tjk~,IqE4TkLsRl02lz66ULRFZV-A3mO46yHO&bctid=2145390889001" }
+              http://link.brightcove.com/services/player/bcpid2091790238001?bckey=AQ~~,AAAAAx_3Tjk~,IqE4TkLsRl02lz66ULRFZV-A3mO46yHO&bctid=2145390889001
+          %li 
+            Forrester - “Forrester’s Top 15 Trends for Customer Service in 2013.” 
+            %a{ href: "http://blogs.forrester.com/kate_leggett/13-01-14-forresters_top_15_trends_for_customer_service_in_2013" } http://blogs.forrester.com/kate_leggett/13-01-14-forresters_top_15_trends_for_customer_service_in_2013

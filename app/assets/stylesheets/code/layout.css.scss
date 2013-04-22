@@ -39,11 +39,11 @@ body {
         float: left;
         width: 80%;
 
-        > div {
+        .containerContent {
           @include prefixed(box-shadow, 0 0 5px #888);
           background-color: #fff;
-          margin: 0 1.25em 1.25em 1.25em;
-          padding: 1.5em;
+          margin: 0 1.25em 2em 1.25em;
+          padding: 2em 3em;
         }
       }
     }
